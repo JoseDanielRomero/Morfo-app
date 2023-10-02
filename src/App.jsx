@@ -1,45 +1,45 @@
-import { useEffect } from 'react';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import SceneInit from './lib/SceneInit';
+import React from 'react'
+import { useState } from 'react';
+import { createContext } from 'react';
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Homepage from './routes/Homepage';
+import MaxillaryCentral from './routes/MaxillaryCentral';
+
+export const PositionContext = createContext([])
 
 function App() {
-  useEffect(() => {
-    const test = new SceneInit('myThreeJsCanvas');
-    test.initialize();
-    test.animate();
 
-    let loadedModel;
-    const glftLoader = new GLTFLoader();
-    glftLoader.load('./assets/maxilary-central/scene.gltf', (gltfScene) => {
-      loadedModel = gltfScene;
-      console.log(loadedModel);
+  // Explained positions: [position.x, position.y, position.z, fov]
+  const database = [
+    {
+      "name": "Incisivo central superior",
+      "description": "Los incisivos centrales maxilares son los dientes más prominentes de la boca. Tienen dos formas básicas: la primera es relativamente ancha, observando el cuello desde la cara vestibular, en comparación con la anchura mesiodistal de las áreas de contacto; la segunda forma es relativamente estrecha en el cuello, en el punto de unión de la corona con la raíz, en comparación con la anchura mesiodistal de las áreas de contacto",
+      "id": 1,
+      "folderName": "maxillary-central",
+      "initialPosition": [0, 0, 60, 40],
+      "incisalPosition": [5, -260, 60, 10] 
+    },
+    {
+      "name": "Incisivo lateral superior",
+      "description": "Los incisivos centrales maxilares son los dientes más prominentes de la boca. Tienen dos formas básicas: la primera es relativamente ancha, observando el cuello desde la cara vestibular, en comparación con la anchura mesiodistal de las áreas de contacto; la segunda forma es relativamente estrecha en el cuello, en el punto de unión de la corona con la raíz, en comparación con la anchura mesiodistal de las áreas de contacto",
+      "id": 2,
+      "folderName": "maxillary-central",
+      "initialPosition": [0, 0, 60, 405],
+      "incisalPosition": [0, -160, 60, 15] 
+    }
+  ]
 
-      gltfScene.scene.position.y = -90;
-      gltfScene.scene.position.z = -180;
-
-      gltfScene.scene.scale.set(50, 50, 50);
-      test.scene.add(gltfScene.scene);
-    });
-
-    // const animate = () => {
-    //   if (loadedModel) {
-    //     // loadedModel.scene.rotation.x += 0.01;
-    //     loadedModel.scene.rotation.y += 0.01;
-    //     // loadedModel.scene.rotation.z += 0.01;
-    //   }
-    //   requestAnimationFrame(animate);
-    // };
-    // animate();
-  }, []);
+  const [actualPosition, setActualPosition] = useState([])
 
   return (
-    <>
-      <div>
-        <canvas id="myThreeJsCanvas" />
-      
-      </div>
-    </>
+    <PositionContext.Provider value={{actualPosition, setActualPosition}}>
+      <HashRouter>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/teeth/maxillary-central' element={<MaxillaryCentral data={database[0]} />} />
+        </Routes>
+      </HashRouter>
+    </PositionContext.Provider>
   );
 }
 

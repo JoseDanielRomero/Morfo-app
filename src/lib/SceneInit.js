@@ -3,18 +3,18 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Stats from 'three/examples/jsm/libs/stats.module';
 
 export default class SceneInit {
-  constructor(canvasId) {
+  constructor(canvasId, actualFov) {
     // NOTE: Core components to initialize Three.js app.
     this.scene = undefined;
     this.camera = undefined;
     this.renderer = undefined;
 
     // NOTE: Camera params;
-    this.fov = 405;
+    this.fov = actualFov;
     this.nearPlane = 1;
     this.farPlane = 1000;
     this.canvasId = canvasId;
-    this.zoom = 6
+    this.zoom = 6;
 
     // NOTE: Additional components.
     this.clock = undefined;
@@ -26,7 +26,9 @@ export default class SceneInit {
     this.directionalLight = undefined;
   }
 
-  initialize() {
+  initialize(actualPos) {
+
+    console.log(actualPos)
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
       this.fov,
@@ -34,7 +36,9 @@ export default class SceneInit {
       1,
       1000
     );
-    this.camera.position.z = 60;
+    this.camera.position.x = actualPos[0];
+    this.camera.position.y = actualPos[1];
+    this.camera.position.z = actualPos[2];
 
     // NOTE: Specify a canvas which is already created in the HTML.
     const canvas = document.getElementById(this.canvasId);
