@@ -34,9 +34,12 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <canvas id="myThreeJsCanvas" />
-    </div>
+    <>
+      <div>
+        <canvas id="myThreeJsCanvas" />
+      
+      </div>
+    </>
   );
 }
 

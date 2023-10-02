@@ -49,6 +49,8 @@ export default class SceneInit {
 
     this.clock = new THREE.Clock();
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    // NOTE: Disable zoom.
+    this.controls.enableZoom = false;
     this.stats = Stats();
     // NOTE: stats hidden
     // document.body.appendChild(this.stats.dom);
@@ -90,6 +92,8 @@ export default class SceneInit {
     // NOTE: Update uniform data on each render.
     // this.uniforms.u_time.value += this.clock.getDelta();
     this.renderer.render(this.scene, this.camera);
+    // NOTE: Change background color, hex code after '0x'.
+    this.renderer.setClearColor( 0x111111 )
   }
 
   onWindowResize() {
