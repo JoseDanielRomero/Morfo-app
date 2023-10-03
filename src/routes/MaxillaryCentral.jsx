@@ -9,8 +9,23 @@ function MaxillaryCentral({ data }) {
 
   const [actualPosition, setActualPosition] = useState(data.initialPosition)
   const [actualHeight, setActualHeight] = useState(window.innerHeight)
+  const [nameIncisal, setNameIncisal] = useState('')
+  const [namePalatal, setNamePalatal] = useState('')
 
-  console.log(data.initialPosition)
+  useEffect(() => {
+    if (data.arch == 'maxillary') {
+      setNamePalatal('Palatino')
+    } else {
+      setNamePalatal('Lingual')
+    }
+
+    if (data.type == 'anterior') {
+      setNameIncisal('Incisal')
+    } else {
+      setNameIncisal('Oclusal')
+    }
+
+  },[])
 
   useEffect(() => {
     // NOTE: Pass fov.
@@ -57,10 +72,21 @@ function MaxillaryCentral({ data }) {
     <>
       <TeethHeader />
       <section className='h-auto w-full lg:pl-20 lg:pr-20 pl-10 pr-10 pt-5 pb-2 bg-[#11111] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3'>
-        <button onClick={()=>handleClick(data.incisalPosition)} className="h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-700 to-pink-800 flex flex-col items-center justify-center cursor-pointer transition ease-in-out">
-          <p className="font-semibold text-lg text-white">Incisal</p>
+        <button onClick={()=>handleClick(data.initialPosition)} className="h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out">
+          <p className="font-semibold text-lg text-white">Vestibular</p>
         </button>
-        
+        <button onClick={()=>handleClick(data.incisalPosition)} className="h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out">
+          <p className="font-semibold text-lg text-white">{namePalatal}</p>
+        </button>
+        <button onClick={()=>handleClick(data.incisalPosition)} className="h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out">
+          <p className="font-semibold text-lg text-white">{nameIncisal}</p>
+        </button>
+        <button onClick={()=>handleClick(data.incisalPosition)} className="h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out">
+          <p className="font-semibold text-lg text-white">Mesial</p>
+        </button>
+        <button onClick={()=>handleClick(data.incisalPosition)} className="h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out">
+          <p className="font-semibold text-lg text-white">Distal</p>
+        </button>
       </section>
       <div>
         <canvas id="myThreeJsCanvas" />
