@@ -8,10 +8,12 @@ import { useState } from 'react';
 function MaxillaryCentral({ data }) {
 
   const [actualPosition, setActualPosition] = useState(data.initialPosition)
+  const [actualHeight, setActualHeight] = useState(window.innerHeight)
 
   console.log(data.initialPosition)
 
   useEffect(() => {
+    // NOTE: Pass fov.
     const test = new SceneInit('myThreeJsCanvas', actualPosition[3]);
     test.initialize(actualPosition);
     test.animate();
@@ -47,15 +49,25 @@ function MaxillaryCentral({ data }) {
 
   }
 
+  window.addEventListener('resize', () => {
+    setActualHeight(window.innerHeight)
+  });
+
   return (
     <>
       <TeethHeader />
-      <button className='h-1/3 w-1/3 bg-white' onClick={()=>handleClick(data.incisalPosition)}>Incisal</button>
+      <section className='h-auto w-full lg:pl-20 lg:pr-20 pl-10 pr-10 pt-5 pb-2 bg-[#11111] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3'>
+        <button onClick={()=>handleClick(data.incisalPosition)} className="h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-700 to-pink-800 flex flex-col items-center justify-center cursor-pointer transition ease-in-out">
+          <p className="font-semibold text-lg text-white">Incisal</p>
+        </button>
+        
+      </section>
       <div>
         <canvas id="myThreeJsCanvas" />
-      
       </div>
-      
+      <main className='h-[200px] w-full bg-slate-400 absolute' style={{ marginTop: actualHeight }}>
+
+      </main>
 
     </>
   );

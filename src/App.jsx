@@ -16,8 +16,8 @@ function App() {
       "description": "Los incisivos centrales maxilares son los dientes más prominentes de la boca. Tienen dos formas básicas: la primera es relativamente ancha, observando el cuello desde la cara vestibular, en comparación con la anchura mesiodistal de las áreas de contacto; la segunda forma es relativamente estrecha en el cuello, en el punto de unión de la corona con la raíz, en comparación con la anchura mesiodistal de las áreas de contacto",
       "id": 1,
       "folderName": "maxillary-central",
-      "initialPosition": [0, 0, 60, 40],
-      "incisalPosition": [5, -260, 60, 10] 
+      "initialPosition": [0, 0, 60, 45],
+      "incisalPosition": [5, -260, 60, 11]
     },
     {
       "name": "Incisivo lateral superior",
