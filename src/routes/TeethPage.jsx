@@ -10,7 +10,7 @@ import bgArticle3 from '../images/Rectangle3.png'
 import bgArticle4 from '../images/Rectangle4.png'
 import bgArticle5 from '../images/Rectangle5.png'
 
-function MaxillaryCentral({ data, surfaces }) {
+function TeethPage({ data, surfaces }) {
 
   const [actualPosition, setActualPosition] = useState(data.initialPosition)
   const [actualHeight, setActualHeight] = useState(window.innerHeight*(80/100))
@@ -31,8 +31,6 @@ function MaxillaryCentral({ data, surfaces }) {
     }
 
   },[])
-
-  console.log(surfaces)
 
   useEffect(() => {
     // NOTE: Pass fov.
@@ -126,7 +124,7 @@ function MaxillaryCentral({ data, surfaces }) {
             assignBackground()
 
             return (
-              <article key={surface.id} className='h-[auto] w-auto flex flex-col items-start justify-end bg-cover bg-center lg:bg-left-top bg-no-repeat p-8' style={{backgroundImage: `url(${background})`}}>
+              <article key={surface.id} className='h-[auto] w-auto flex flex-col items-start justify-end bg-cover bg-center lg:bg-left-top bg-no-repeat p-8 gap-1' style={{backgroundImage: `url(${background})`}}>
                 <h6 className='font-unbounded font-light text-[1.3rem] text-white'>{surface.title}</h6>
                 <p className='font-inter font-normal text-[1rem] text-white leading-tight'>{surface.text}</p>
               </article>
@@ -139,4 +137,4 @@ function MaxillaryCentral({ data, surfaces }) {
   );
 }
 
-export default MaxillaryCentral;
+export default TeethPage;

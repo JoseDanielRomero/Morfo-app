@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { createContext } from 'react';
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Homepage from './routes/Homepage';
-import MaxillaryCentral from './routes/MaxillaryCentral';
+import TeethPage from './routes/TeethPage';
 
 export const PositionContext = createContext([])
 
@@ -108,7 +108,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/maxillary/maxillary-central' element={<MaxillaryCentral data={database[0]} surfaces={surfacesInfo[0]} />} />
+          <Route path='/maxillary/maxillary-central' element={<TeethPage data={database[0]} surfaces={surfacesInfo[0]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
