@@ -47,7 +47,7 @@ export default class SceneInit {
       // NOTE: Anti-aliasing smooths out the edges.
       antialias: true,
     });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth*(80/100), window.innerHeight*(80/100) );
     // this.renderer.shadowMap.enabled = true;
     document.body.appendChild(this.renderer.domElement);
 
@@ -103,6 +103,6 @@ export default class SceneInit {
   onWindowResize() {
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(window.innerWidth*(80/100), window.innerHeight*(80/100));
   }
 }

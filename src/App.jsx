@@ -19,7 +19,10 @@ function App() {
       "type": "anterior",
       "folderName": "maxillary-central",
       "initialPosition": [0, 0, 60, 45],
-      "incisalPosition": [5, -260, 60, 11]
+      "palatalPosition": [0, -30, -60, 45],
+      "incisalPosition": [5, -260, 60, 11],
+      "mesialPosition": [-200, 0, 10, 15],
+      "distalPosition": [200, 0, -60, 15]
     },
     {
       "name": "Incisivo lateral superior",
@@ -28,8 +31,11 @@ function App() {
       "arch": "maxillary",
       "type": "anterior",
       "folderName": "maxillary-central",
-      "initialPosition": [0, 0, 60, 405],
-      "incisalPosition": [0, -160, 60, 15] 
+      "initialPosition": [0, 0, 60, 45],
+      "palatalPosition": [0, -30, -60, 45],
+      "incisalPosition": [5, -260, 60, 11],
+      "mesialPosition": [-200, 0, 10, 15],
+      "distalPosition": [200, 0, -60, 15]
     }
   ]
 
@@ -40,7 +46,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/teeth/maxillary-central' element={<MaxillaryCentral data={database[0]} />} />
+          <Route path='/maxillary/maxillary-central' element={<MaxillaryCentral data={database[0]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
