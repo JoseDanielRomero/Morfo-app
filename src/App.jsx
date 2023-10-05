@@ -22,49 +22,53 @@ function App() {
       "palatalPosition": [0, -30, -60, 45],
       "incisalPosition": [5, -260, 60, 11],
       "mesialPosition": [-200, 0, 10, 15],
-      "distalPosition": [200, 0, -60, 15]
+      "distalPosition": [200, 0, -60, 15],
+      "scene": [0, -90, -180]
     },
     {
       "name": "Incisivo lateral superior",
-      "description": "Los incisivos centrales maxilares son los dientes más prominentes de la boca. Tienen dos formas básicas: la primera es relativamente ancha, observando el cuello desde la cara vestibular, en comparación con la anchura mesiodistal de las áreas de contacto; la segunda forma es relativamente estrecha en el cuello, en el punto de unión de la corona con la raíz, en comparación con la anchura mesiodistal de las áreas de contacto",
+      "description": "Como el incisivo lateral complementa la función del central, las coronas guardan un notable parecido. El lateral maxilar es más pequeño en todas sus dimensiones, excepto en la longitud de la raíz. Este diente se diferencia del incisivo central en su desarrollo, que puede variar considerablemente. La forma de los incisivos maxilares laterales varía más que la de ningún otro diente en la boca, excepto el tercer molar.",
       "id": 2,
       "arch": "maxillary",
       "type": "anterior",
-      "folderName": "maxillary-central",
-      "initialPosition": [0, 0, 60, 45],
-      "palatalPosition": [0, -30, -60, 45],
-      "incisalPosition": [5, -260, 60, 11],
-      "mesialPosition": [-200, 0, 10, 15],
-      "distalPosition": [200, 0, -60, 15]
+      "folderName": "maxillary-lateral",
+      "initialPosition": [20, 10, 60, 45],
+      "palatalPosition": [-5, -30, -60, 45],
+      "incisalPosition": [15, -260, 60, 11],
+      "mesialPosition": [-200, 0, 30, 15],
+      "distalPosition": [200, 0, -60, 15],
+      "scene": [-20, -103, -200]
     }
   ]
+
+  // "scene": [-20, -95, -200]
 
   const surfacesInfo = [
     {
       "infoBoxes": [
         {
           "title": "VESTIBULAR",
-          "text": "La corona promedio del incisivo central tiene de 10 a 11 mm de longitud, medida desde el punto más alto de la línea cervical hasta el punto más bajo del borde incisal. La distancia mesiodistal tiene una amplitud de 8 a 9 mm en las áreas de contacto. Las crestas de la curvatura mesial y distal de la corona representan las áreas en las que el incisivo central contacta con sus vecinos. Cualquier cambio en la posición del contorno de esta cresta afecta al nivel del área de contacto.",
+          "text": "Presenta una superficie convexa acentuándose en el tercio cervical, con excepción de la concurrencia de los tercios medio y central donde es plana. Cuenta con dos líneas paralelas al eje longitudinal del diente, que corresponden a las líneas de crecimiento, formadas por los lóbulos de calcificación del diente. En el tercio cervical se ubican las líneas de imbricación de pickerill, periquimatos o periquematías (formadas también durante la calcificación). Corren paralelas a la línea cervical, lo cual rompe con el brillo de la superficie.",
           "id": 1
         },
         {
           "title": "LINGUAL",
-          "text": "El perfil lingual del incisivo central maxilar es la imagen especular de la cara vestibular. La cara lingual de la corona es diferente, sin embargo, comparada con la superficie de la cara vestibular. En ésta, la superficie de la corona es generalmente lisa; la cara lingual tiene convexidades y una concavidad. El perfil de la línea cervical es similar, pero inmediatamente por debajo de la línea cervical aparece una ligera convexidad, llamada cingulo.",
+          "text": "Es de forma trapezoidal. En el centro se localiza una superficie cóncava llamada fosa central o palatina situada en el tercio medio e incisal, que corresponde al lóbulo central. En cervical está ubicado el cíngulo, talón del diente o cuarto lóbulo. Es un tubérculo de forma redondeada a veces bifurcada o trifurcada. En algunas ocasiones presenta una falla del esmalte que forma un agujero.",
           "id": 2
         },
         {
           "title": "MESIAL",
-          "text": "La cara mesial de este diente tiene la forma típica de un incisivo. La corona tiene forma de cuña o de triángulo con la base en el cuello y el vértice en el borde incisal.",
+          "text": "Es de forma triangular, con base mayor en cervical y vértice en incisal. Tiene una superficie ligeramente convexa, siendo más notorio en los tercios incisal y medio.",
           "id": 3
         },
         {
           "title": "DISTAL",
-          "text": "Existen pocas diferencias entre la cara mesial y la distal. Cuando se observa un incisivo central desde su cara distal, da la impresión de que la corona es más gruesa hacia el borde incisal. Debido a la inclinación de la superficie vestibular distolingualmente, parte de esta superficie se puede ver desde la cara distal; esto crea la ilusión de mayor espesor.",
+          "text": "Presenta casi la misma forma que la mesial, pero con menor dimensión y mayor convexidad.",
           "id": 4
         },
         {
           "title": "INCISAL",
-          "text": "La corona de este diente se ve más abultada desde esta cara de lo que podría esperarse de su visión por la cara mesial y distal. En las áreas de contacto mesial y distal las superficies son relativamente anchas. Se pueden comparar también las medidas de la corona vestibulolingual y mesiodistalmente.",
+          "text": "Es una superficie muy angosta con 1 o 2 mm de grosor, extendiéndose a lo ancho del diente. Los lóbulos de calcificación del diente forman proyecciones llamadas mamelones. Al entrar en contacto de forma natural con los dientes antagonistas, estos mamelones se desgastan dejando un borde incisal casi recto.",
           "id": 5
         }
       ]
@@ -73,27 +77,27 @@ function App() {
       "infoBoxes": [
         {
           "title": "VESTIBULAR",
-          "text": "La corona promedio del incisivo central tiene de 10 a 11 mm de longitud, medida desde el punto más alto de la línea cervical hasta el punto más bajo del borde incisal. La distancia mesiodistal tiene una amplitud de 8 a 9 mm en las áreas de contacto. Las crestas de la curvatura mesial y distal de la corona representan las áreas en las que el incisivo central contacta con sus vecinos. Cualquier cambio en la posición del contorno de esta cresta afecta al nivel del área de contacto.",
+          "text": "Es de forma trapezoidal con tendencia a triangular con base en incisal. Sólo es notable la línea de crecimiento mesial, la cual recorre únicamente el tercio incisal.",
           "id": 1
         },
         {
           "title": "LINGUAL",
-          "text": "El perfil lingual del incisivo central maxilar es la imagen especular de la cara vestibular. La cara lingual de la corona es diferente, sin embargo, comparada con la superficie de la cara vestibular. En ésta, la superficie de la corona es generalmente lisa; la cara lingual tiene convexidades y una concavidad. El perfil de la línea cervical es similar, pero inmediatamente por debajo de la línea cervical aparece una ligera convexidad, llamada cingulo.",
+          "text": "De forma trapezoidal, más pequeña que la cara labial. Sus crestas marginales son tan voluminosas que la unión entre estas y el cíngulo crea una fosa lingual muy profunda que en ocasiones termina en un agujero y genera una complicación para la limpieza.",
           "id": 2
         },
         {
           "title": "MESIAL",
-          "text": "La cara mesial de este diente tiene la forma típica de un incisivo. La corona tiene forma de cuña o de triángulo con la base en el cuello y el vértice en el borde incisal.",
+          "text": "Tiene forma triangular con base en cervical. En esta región existe una pequeña concavidad que caracteriza este diente y con frecuencia presenta un agujero en el esmalte.",
           "id": 3
         },
         {
           "title": "DISTAL",
-          "text": "Existen pocas diferencias entre la cara mesial y la distal. Cuando se observa un incisivo central desde su cara distal, da la impresión de que la corona es más gruesa hacia el borde incisal. Debido a la inclinación de la superficie vestibular distolingualmente, parte de esta superficie se puede ver desde la cara distal; esto crea la ilusión de mayor espesor.",
+          "text": "Presenta casi la misma forma que la mesial, pero con menor dimensión y mayor convexidad.",
           "id": 4
         },
         {
           "title": "INCISAL",
-          "text": "La corona de este diente se ve más abultada desde esta cara de lo que podría esperarse de su visión por la cara mesial y distal. En las áreas de contacto mesial y distal las superficies son relativamente anchas. Se pueden comparar también las medidas de la corona vestibulolingual y mesiodistalmente.",
+          "text": "El borde está inclinado de mesial a distal, haciendo que sus ángulos sean obtusos. La línea de crecimiento mesial (única visible), forma un pequeño surco en su borde asemejando un número '3'.",
           "id": 5
         }
       ]
@@ -109,6 +113,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/maxillary/maxillary-central' element={<TeethPage data={database[0]} surfaces={surfacesInfo[0]} />} />
+          <Route path='/maxillary/maxillary-lateral' element={<TeethPage data={database[1]} surfaces={surfacesInfo[1]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>

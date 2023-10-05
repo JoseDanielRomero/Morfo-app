@@ -30,7 +30,10 @@ function TeethPage({ data, surfaces }) {
       setNameIncisal('Oclusal')
     }
 
-  },[])
+    // NOTE: Reset position to initial.
+    setActualPosition(data.initialPosition)
+
+  },[data])
 
   useEffect(() => {
     // NOTE: Pass fov.
@@ -40,12 +43,13 @@ function TeethPage({ data, surfaces }) {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load('../../assets/maxillary-central/scene.gltf', (gltfScene) => {
+    glftLoader.load(`../../assets/${data.folderName}/scene.gltf`, (gltfScene) => {
       loadedModel = gltfScene;
       console.log(loadedModel);
 
-      gltfScene.scene.position.y = -90;
-      gltfScene.scene.position.z = -180;
+      gltfScene.scene.position.x = data.scene[0];
+      gltfScene.scene.position.y = data.scene[1];
+      gltfScene.scene.position.z = data.scene[2];
 
       gltfScene.scene.scale.set(50, 50, 50);
       test.scene.add(gltfScene.scene);
@@ -60,7 +64,7 @@ function TeethPage({ data, surfaces }) {
     //   requestAnimationFrame(animate);
     // };
     // animate();
-  }, [actualPosition]);
+  }, [actualPosition, data]);
 
   const handleClick = (params) => {
 
@@ -76,6 +80,7 @@ function TeethPage({ data, surfaces }) {
   return (
     <>
       <TeethHeader
+        name={data.name}
         description={data.description}
       />
       <section className='h-auto w-full lg:pl-20 lg:pr-20 pl-10 pr-10 pt-5 pb-2 bg-[#11111] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3'>
