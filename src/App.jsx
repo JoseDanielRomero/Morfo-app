@@ -38,10 +38,22 @@ function App() {
       "mesialPosition": [-200, 0, 30, 15],
       "distalPosition": [200, 0, -60, 15],
       "scene": [-20, -103, -200]
+    },
+    {
+      "name": "Canino superior",
+      "description": "El perfil de las caras vestibular y lingual contiene una serie de curvas y arcos, excepto el ángulo que existe en la punta de la cúspide. Esta cúspide tiene una cresta mesial incisal, y otra incisal distal. La mitad mesial de la corona contacta con el incisivo lateral, y la mitad distal, con el primer premolar. Por ello, las áreas de contacto están a distintos niveles cervicoincisalmente.",
+      "id": 3,
+      "arch": "maxillary",
+      "type": "anterior",
+      "folderName": "maxillary-canine",
+      "initialPosition": [30, -10, 60, 42],
+      "palatalPosition": [-35, -30, -60, 38],
+      "incisalPosition": [35, -260, 60, 11],
+      "mesialPosition": [-200, 0, 120, 13],
+      "distalPosition": [200, 0, -120, 13],
+      "scene": [-27, -84, -170]
     }
   ]
-
-  // "scene": [-20, -95, -200]
 
   const surfacesInfo = [
     {
@@ -52,7 +64,7 @@ function App() {
           "id": 1
         },
         {
-          "title": "LINGUAL",
+          "title": "PALATINO",
           "text": "Es de forma trapezoidal. En el centro se localiza una superficie cóncava llamada fosa central o palatina situada en el tercio medio e incisal, que corresponde al lóbulo central. En cervical está ubicado el cíngulo, talón del diente o cuarto lóbulo. Es un tubérculo de forma redondeada a veces bifurcada o trifurcada. En algunas ocasiones presenta una falla del esmalte que forma un agujero.",
           "id": 2
         },
@@ -81,7 +93,7 @@ function App() {
           "id": 1
         },
         {
-          "title": "LINGUAL",
+          "title": "PALATINO",
           "text": "De forma trapezoidal, más pequeña que la cara labial. Sus crestas marginales son tan voluminosas que la unión entre estas y el cíngulo crea una fosa lingual muy profunda que en ocasiones termina en un agujero y genera una complicación para la limpieza.",
           "id": 2
         },
@@ -101,6 +113,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Su forma es de pentágono. El brazo mesial es corto y el distal largo (más inclinado hacia cervical). Su tercio cervical es muy estrecho, lo que le da una fuerte convexidad a toda esta área. Sobre su superficie presenta dos vertientes que le dan forma a su cúspide. Tiene dos líneas de crecimiento de la cuales la distal es muy marcada. Presenta periquimatos (paralelas a la línea cervical).",
+          "id": 1
+        },
+        {
+          "title": "PALATINO",
+          "text": "También es pentagonal, pero no presenta fosa palatina. Sus crestas marginales son muy gruesas y de poca altura. El cíngulo es alto, muy estrecho y de gran convexidad. En la unión de las crestas marginales y las vertientes de su lóbulo central localizamos dos depresiones de forma triangular con vértice hacia el cíngulo.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Es de forma triangular, amplia y de corta altura.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "También tiene forma triangular, de menor altura que la mesial.",
+          "id": 4
+        },
+        {
+          "title": "INCISAL",
+          "text": "Es un borde angosto donde sobresale el lóbulo central, dando la forma de cúspide. El desgaste natural de la masticación lo puede convertir en un borde plano.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -114,6 +155,7 @@ function App() {
           <Route path='/' element={<Homepage />} />
           <Route path='/maxillary/maxillary-central' element={<TeethPage data={database[0]} surfaces={surfacesInfo[0]} />} />
           <Route path='/maxillary/maxillary-lateral' element={<TeethPage data={database[1]} surfaces={surfacesInfo[1]} />} />
+          <Route path='/maxillary/maxillary-canine' element={<TeethPage data={database[2]} surfaces={surfacesInfo[2]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
