@@ -52,6 +52,20 @@ function App() {
       "mesialPosition": [-200, 0, 120, 13],
       "distalPosition": [200, 0, -120, 13],
       "scene": [-27, -84, -170]
+    },
+    {
+      "name": "Primer premolar superior",
+      "description": "El primer premolar maxilar tiene dos cúspides, una vestibular y otra lingual, marcadamente definidas. La cúspide vestibular acostumbra a ser 1mm más larga que la lingual. La corona está formada por ángulos, cuyos vértices vestibulares son prominentes.",
+      "id": 4,
+      "arch": "maxillary",
+      "type": "posterior",
+      "folderName": "maxillary-first-premolar",
+      "initialPosition": [160, 20, 60, 17],
+      "palatalPosition": [-190, -10, -60, 14],
+      "incisalPosition": [35, -260, 60, 11],
+      "mesialPosition": [-50, -30, 120, 23],
+      "distalPosition": [50, -30, -120, 21],
+      "scene": [-41, -99, -160]
     }
   ]
 
@@ -142,6 +156,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma pentagonal, con aspecto parecido al canino (solo que más pequeño). El perfil oclusal tiene dos brazos simétricos y cortos más alargados que en el canino. Presenta líneas de crecimiento muy marcadas.",
+          "id": 1
+        },
+        {
+          "title": "PALATINO",
+          "text": "La cúspide palatina está casi siempre inclinada hacia mesial y es de menor altura que la vestibular. El perfil oclusal está formado por dos brazos, de los cuales, el mesial es más corto. Su superficie es convexa en todas direcciones.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Es de forma trapezoidal. En el tercio oclusal está dividida en dos porciones como consecuencia de la prolongación del surco fundamental. La porción palatina es más pequeña y convexa.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Es de forma cuadrilátera o trapezoidal. El surco fundamental casi no es visible.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Es de forma pentagonal. Está alargada en sentido vestíbulopalatatino y formada por dos cúspides. La vestibular es más grande y en forma de pirámide cuadrangular, y por otro lado, la cúspide palatina es más pequeña y de forma conoide. Las cúspides se encuentran separadas por el surco fundamental.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -156,6 +199,7 @@ function App() {
           <Route path='/maxillary/maxillary-central' element={<TeethPage data={database[0]} surfaces={surfacesInfo[0]} />} />
           <Route path='/maxillary/maxillary-lateral' element={<TeethPage data={database[1]} surfaces={surfacesInfo[1]} />} />
           <Route path='/maxillary/maxillary-canine' element={<TeethPage data={database[2]} surfaces={surfacesInfo[2]} />} />
+          <Route path='/maxillary/maxillary-first-premolar' element={<TeethPage data={database[3]} surfaces={surfacesInfo[3]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
