@@ -62,7 +62,7 @@ function App() {
       "folderName": "maxillary-first-premolar",
       "initialPosition": [160, 20, 60, 17],
       "palatalPosition": [-190, -10, -60, 14],
-      "incisalPosition": [35, -260, 60, 11],
+      "incisalPosition": [35, -260, 10, 11],
       "mesialPosition": [-50, -30, 120, 23],
       "distalPosition": [50, -30, -120, 21],
       "scene": [-41, -99, -160]
