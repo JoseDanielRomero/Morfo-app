@@ -66,6 +66,20 @@ function App() {
       "mesialPosition": [-50, -30, 120, 23],
       "distalPosition": [50, -30, -120, 21],
       "scene": [-41, -99, -160]
+    },
+    {
+      "name": "Segundo premolar superior",
+      "description": "El segundo premolar maxilar complementa la función del primero. Se puede establecer una comparación directa entre el primer y el segundo premolar, señalando sus variaciones. El segundo premolar maxilar es menos anguloso y da la impresión de tener la corona más redondeada en todas sus caras. Tiene una raíz única y pueden existir variaciones considerables en el tamaño de estos dos dientes, puesto que el segundo premolar no es tan constante en su forma como el primero.",
+      "id": 5,
+      "arch": "maxillary",
+      "type": "posterior",
+      "folderName": "maxillary-second-premolar",
+      "initialPosition": [160, -20, 60, 16],
+      "palatalPosition": [-170, -10, -60, 15],
+      "incisalPosition": [22, -660, 9, 4.3],
+      "mesialPosition": [-50, -20, 120, 20],
+      "distalPosition": [50, -30, -120, 21],
+      "scene": [-50, -105, -160]
     }
   ]
 
@@ -185,6 +199,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma pentagonal. Su superficie es más homogénea que la del primer premolar superior. En el perfil oclusal los brazos forman un ángulo más abierto que la del primer premolar y la cúspide es menos aguda.",
+          "id": 1
+        },
+        {
+          "title": "PALATINO",
+          "text": "Es de forma pentagonal con tendencia ovoide. Su altura es casi la misma que la cúspide vestibular. Su vértice por lo general se encuentra en el centro del perfil oclusal.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Son de forma trapezoidal, de convexidad homogénea y de igual tamaño.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Son de forma trapezoidal, de convexidad homogénea y de igual tamaño.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Es de forma ovoide. Sus cúspides son casi de la misma altura y anchura, dónde el surco fundamental está ligeramente cargado hacia palatino. Este surco es muy corto mesiodistalmente, por lo que en algunas ocasiones aparenta ser un agujero, el cual se ubica en el centro de la cara oclusal.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -200,6 +243,7 @@ function App() {
           <Route path='/maxillary/maxillary-lateral' element={<TeethPage data={database[1]} surfaces={surfacesInfo[1]} />} />
           <Route path='/maxillary/maxillary-canine' element={<TeethPage data={database[2]} surfaces={surfacesInfo[2]} />} />
           <Route path='/maxillary/maxillary-first-premolar' element={<TeethPage data={database[3]} surfaces={surfacesInfo[3]} />} />
+          <Route path='/maxillary/maxillary-second-premolar' element={<TeethPage data={database[4]} surfaces={surfacesInfo[4]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>

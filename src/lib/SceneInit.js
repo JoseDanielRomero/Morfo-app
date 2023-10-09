@@ -53,8 +53,9 @@ export default class SceneInit {
 
     this.clock = new THREE.Clock();
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-    // NOTE: Disable zoom.
+    // NOTE: Disable zoom and float (pan).
     this.controls.enableZoom = false;
+    this.controls.enablePan = false;
     this.stats = Stats();
     // NOTE: stats hidden
     // document.body.appendChild(this.stats.dom);
