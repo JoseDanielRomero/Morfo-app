@@ -80,6 +80,20 @@ function App() {
       "mesialPosition": [-50, -20, 120, 20],
       "distalPosition": [50, -30, -120, 21],
       "scene": [-50, -105, -160]
+    },
+    {
+      "name": "Primer molar superior",
+      "description": "Normalmente, el primer molar maxilar es el diente más grande de la arcada maxilar. Tiene cuatro cúspides funcionales bien desarrolladas y una cúspide suplementaria de escasa importancia práctica. Las cuatro cúspides principales de mayor importancia fisiológica son la mesiovestibular, la distovestibular, la mesiolingual y la distolingual. La cúspide suplementaria se denomina cúspide o tubérculo de Carabelli.",
+      "id": 6,
+      "arch": "maxillary",
+      "type": "posterior",
+      "folderName": "maxillary-first-molar",
+      "initialPosition": [150, -20, 60, 16],
+      "palatalPosition": [-125, 20, -60, 18],
+      "incisalPosition": [22, -970, 7, 2.7],
+      "mesialPosition": [-50, 0, 120, 20],
+      "distalPosition": [40, -10, -120, 20],
+      "scene": [-48, -91, -120]
     }
   ]
 
@@ -228,6 +242,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma trapezoidal con base en oclusal, de mayor dimensión de mesial a distal y menor de cervical a oclusal. En el tercio medio y oclusal existe un surco llamado oclusovestibular, que divide a esta cara en dos, una mesial y otra distal. Generalmente se cruza con otro surco más pequeño transversal formando una pequeña cruz en el centro de esta cara generando un agujero. La cúspide mesiovestibular es ligeramente más ancha que la mesiodistal.",
+          "id": 1
+        },
+        {
+          "title": "PALATINO",
+          "text": "Es convexa de forma trapezoidal con base en oclusal, es de menor superficie que la cara vestibular. Presenta un surco que proviene de la fosa triangular distal que divide a las cúspides mesiopalatina y distopalatina. La cúspide mesiopalatina presenenta una elevación muy prominente y obtusa, constituye aproximadamente las tres quintas partes del ancho mesiodistal de la corona. La cúspide distopalatina presenta un perfil más redondeado.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Tiene forma cuadrilátera, de mayor dimensión vestíbulopalatina. En esta cara se puede apreciar el doble perfil formado por el tubérculo de Carabelli (cuando se encuentra presente).",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Su forma geométrica es trapezoidal con base en cervical, se puede apreciar una superficie de convexidad homogénea.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Es de forma romboidal, con dos ángulos agudos en mesiovestibular y distopalatino, así como dos ángulos obtusos: en mesiopalatino y distovestibular. Las eminencias se presentan dos vestibulares y dos palatinas. A continuación se describen sus componentes: Cúspide mesiovestibular y cúspide distovestibular, Cúspide mesiopalatina, Cúspide distopalatina, Tubérculo de Carabelli, Cresta oblicua y crestas marginales, Depresiones de la cara oclusal",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -244,6 +287,7 @@ function App() {
           <Route path='/maxillary/maxillary-canine' element={<TeethPage data={database[2]} surfaces={surfacesInfo[2]} />} />
           <Route path='/maxillary/maxillary-first-premolar' element={<TeethPage data={database[3]} surfaces={surfacesInfo[3]} />} />
           <Route path='/maxillary/maxillary-second-premolar' element={<TeethPage data={database[4]} surfaces={surfacesInfo[4]} />} />
+          <Route path='/maxillary/maxillary-first-molar' element={<TeethPage data={database[5]} surfaces={surfacesInfo[5]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
