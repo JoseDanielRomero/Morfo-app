@@ -139,7 +139,7 @@ function App() {
     },
     {
       "name": "Incisivo lateral inferior",
-      "description": "Este diente es el segundo   incisivo a partir de la línea media mandibular a derecha e izquierda. Se parece tanto al incisivo central que sólo describiremos brevemente sus características, pues se puede comparar directamente con el incisivo central y resaltar sus diferencias. Los dos incisivos funcionan en la arcada dental como un conjunto; por ello, su forma funcional es similar. Como en el incisivo central, el incisivo lateral es uniforme si se compara con otros dientes.",
+      "description": "Este diente es el segundo incisivo a partir de la línea media mandibular a derecha e izquierda. Se parece tanto al incisivo central que sólo describiremos brevemente sus características, pues se puede comparar directamente con el incisivo central y resaltar sus diferencias. Los dos incisivos funcionan en la arcada dental como un conjunto; por ello, su forma funcional es similar. Como en el incisivo central, el incisivo lateral es uniforme si se compara con otros dientes.",
       "id": 10,
       "arch": "mandibular",
       "type": "anterior",
@@ -150,6 +150,20 @@ function App() {
       "mesialPosition": [-200, 10, 50, 14],
       "distalPosition": [200, 10, -50, 14.5],
       "scene": [1, -53, -165]
+    },
+    {
+      "name": "Canino inferior",
+      "description": "Como los caninos maxilar y mandibular guardan un estrecho parecido, al describir el canino mandibular se pueden establecer comparaciones directas con el canino maxilar. La corona del canino mandibular es más estrecha mesiodistalmente que la del canino maxilar, aunque en muchos casos es de la misma longitud y, a veces, de 0,5 a 1 mm mayor. La raíz puede ser tan larga como la del canino maxilar, aunque normalmente es algo más corta.",
+      "id": 11,
+      "arch": "mandibular",
+      "type": "anterior",
+      "folderName": "mandibular-canine",
+      "initialPosition": [70, 10, 120, 21],
+      "palatalPosition": [-55, 50, -80, 26],
+      "incisalPosition": [30, 270, 40, 11],
+      "mesialPosition": [-200, 10, 220, 10],
+      "distalPosition": [200, 10, -180, 11],
+      "scene": [-20, -47.5, -135]
     }
   ]
 
@@ -443,6 +457,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma pentagonal. Sus tercios medio y cervical son convexos y presenta 2 o 3 periquimatos en el tercio cervical, pero no tan marcados como en el canino superior. De los surcos interlobulares, el que se encuentra entre los lóbulos central y el distal es más marcado.",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "De forma pentagonal, concavidad homogénea, pero convexa en el tercio cervical por la presencia del cíngulo. En el tercio medio e incisal de esta cara se encuentra la fosa lingual.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Su forma es triangular con base en cervical y vértice en incisal. Sus tercios incisal y medio son convexos y el tercio cervical, en la porción central, presenta una ligera concavidad. Su proyección coronal es lingualizada. Tanto sus convexidades como sus concavidades son menos marcadas que en el canino superior.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Su forma es triangular con base en cervical y vértice en incisal. Es más pequeña que la cara mesial, los tercios incisal y medio son más convexos que en mesial.",
+          "id": 4
+        },
+        {
+          "title": "INCISAL",
+          "text": "El borde incisal del canino está formado por dos brazos, uno mesial corto, que provoca que la cima de la cúspide se cargue hacia este lado, y el tramo distal largo.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -464,6 +507,7 @@ function App() {
           <Route path='/maxillary/maxillary-third-molar' element={<TeethPage data={database[7]} surfaces={surfacesInfo[7]} />} />
           <Route path='/maxillary/mandibular-central' element={<TeethPage data={database[8]} surfaces={surfacesInfo[8]} />} />
           <Route path='/maxillary/mandibular-lateral' element={<TeethPage data={database[9]} surfaces={surfacesInfo[9]} />} />
+          <Route path='/maxillary/mandibular-canine' element={<TeethPage data={database[10]} surfaces={surfacesInfo[10]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
