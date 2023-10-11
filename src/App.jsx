@@ -122,6 +122,20 @@ function App() {
       "mesialPosition": [-50, 0, 120, 41],
       "distalPosition": [40, -10, -120, 41],
       "scene": [-150, -240, -110]
+    },
+    {
+      "name": "Incisivo central inferior",
+      "description": "Generalmente, el incisivo central mandibular es el diente más pequeño de la arcada. La corona es algo mayor que la mitad del incisivo central maxilar en sentido mesiodistal; sin embargo, el diámetro vestibulolingual es solamente 1 mm menor. Este refuerzo es necesario porque las líneas principales de las fuerzas masticatorias actúan sobre los incisivos mandibulares en dirección vestibulolingual.",
+      "id": 9,
+      "arch": "mandibular",
+      "type": "anterior",
+      "folderName": "mandibular-central",
+      "initialPosition": [30, 0, 80, 34],
+      "palatalPosition": [-15, 50, -60, 36],
+      "incisalPosition": [13, 120, 40, 24],
+      "mesialPosition": [-200, 0, 90, 13.5],
+      "distalPosition": [200, 0, -90, 13.5],
+      "scene": [-11, -59, -170]
     }
   ]
 
@@ -357,6 +371,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Se asemeja a un trapecio con base mayor en incisal y menor en cervical. Toda su superficie es muy homogénea, ya que casi no se observan las líneas de crecimiento ni los periquimatos.",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "Esta es de forma triangular con base en incisal. Es convexa en el tercio cervical por la presencia de un pequeño cíngulo y cóncava en el tercio medio e incisal por su fosa lingual.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Tiene forma triangular con base en cervical y vértice en incisal. La superficie es ligeramente plana.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "De forma triangular con base en cervical, aplanada en los tercios medio e incisal.",
+          "id": 4
+        },
+        {
+          "title": "INCISAL",
+          "text": "Generalmente cuando está recién erupcionado, presenta mamelones. Al entrar en contacto con los dientes antagonistas, estos mamelones se desgastan dejando un borde incisal recto con una inclinación de lingual a vestibular hacia cervical.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -376,6 +419,7 @@ function App() {
           <Route path='/maxillary/maxillary-first-molar' element={<TeethPage data={database[5]} surfaces={surfacesInfo[5]} />} />
           <Route path='/maxillary/maxillary-second-molar' element={<TeethPage data={database[6]} surfaces={surfacesInfo[6]} />} />
           <Route path='/maxillary/maxillary-third-molar' element={<TeethPage data={database[7]} surfaces={surfacesInfo[7]} />} />
+          <Route path='/maxillary/mandibular-central' element={<TeethPage data={database[8]} surfaces={surfacesInfo[8]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>

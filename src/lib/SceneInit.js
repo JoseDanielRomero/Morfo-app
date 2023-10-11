@@ -28,7 +28,6 @@ export default class SceneInit {
 
   initialize(actualPos) {
 
-    console.log(actualPos)
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
       this.fov,
