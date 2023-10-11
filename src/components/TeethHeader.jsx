@@ -15,7 +15,7 @@ function TeethHeader({ description, name }) {
           </div>
         </div>
         <div className='h-auto w-full flex flex-col items-start justify-center order-1 md:order-2'>
-          <h1 className='text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-200 via-purple-500 to-pink-600 font-unbounded font-light'>
+          <h1 className='text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-200 via-purple-500 to-pink-600 font-unbounded font-light leading-tight'>
             {name}
           </h1>
         </div>

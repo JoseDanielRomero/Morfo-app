@@ -164,6 +164,20 @@ function App() {
       "mesialPosition": [-200, 10, 220, 10],
       "distalPosition": [200, 10, -180, 11],
       "scene": [-20, -47.5, -135]
+    },
+    {
+      "name": "Primer premolar inferior",
+      "description": "Es el cuarto diente a partir de la línea media, y el primer diente posterior de la mandíbula. Está situado entre el canino y el segundo premolar y presenta características comunes a ambos. Las particularidades que lo asemejan al canino mandibular son las siguientes: La cúspide vestibular es larga y puntiaguda y es la única que ocluye. / El diámetro vestibulolingual es semejante al del canino. 3. Las superficie oclusal desciende marcadamente hacia lingual y cervical. / La cresta de la cúspide mesiovestibular es más corta que la de la distovestibular. / El perfil de la cara oclusal se parece al de la cara incisal del canino.",
+      "id": 12,
+      "arch": "mandibular",
+      "type": "posterior",
+      "folderName": "mandibular-first-premolar",
+      "initialPosition": [100, 10, 120, 18],
+      "palatalPosition": [-95, 30, -80, 22],
+      "incisalPosition": [40, 300, 40, 9.5],
+      "mesialPosition": [-200, 10, 220, 10],
+      "distalPosition": [200, 10, -180, 11],
+      "scene": [-35, -50, -135]
     }
   ]
 
@@ -486,6 +500,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma pentagonal, muy parecida a la del canino, pero de menor longitud de cervical a oclusal. Todos sus ángulos son obtusos; sus tercios medio y oclusal presentan dos vertientes lisas: una mesial y otra distal, las cuales están unidas por una arista ubicada en el lóbulo central.",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "Está formada por el cuarto lóbulo de crecimiento. Es una superficie pequeña, convexa y con apariencia de tubérculo.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Es de forma de trapecio irregular, muy convexa en la porción ocluso vestibular, ligeramente cóncava en el tercio cervical. Desde esta cara se puede observar la inclinación de la corona hacia lingual.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Igual a la cara mesial, pero más pequeña y más convexa. Su perfil vestibular es muy curvo, llegando a formar casi un cuarto de círculo.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Es de forma circular, su cúspide vestibular ocupa 3/4 partes de la cara oclusal. En ocasiones se encuentra una cresta intercuspídea. Los surcos de la cara oclusal pueden tener tres variantes: En forma de H, en forma de U y en forma de Y.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -508,6 +551,7 @@ function App() {
           <Route path='/maxillary/mandibular-central' element={<TeethPage data={database[8]} surfaces={surfacesInfo[8]} />} />
           <Route path='/maxillary/mandibular-lateral' element={<TeethPage data={database[9]} surfaces={surfacesInfo[9]} />} />
           <Route path='/maxillary/mandibular-canine' element={<TeethPage data={database[10]} surfaces={surfacesInfo[10]} />} />
+          <Route path='/maxillary/mandibular-first-premolar' element={<TeethPage data={database[11]} surfaces={surfacesInfo[11]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
