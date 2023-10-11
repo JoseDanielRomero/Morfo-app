@@ -74,7 +74,12 @@ export default class SceneInit {
     this.directionalLight.position.set(-500, 32, 64);
     this.scene.add(this.directionalLight);
 
-    // directional light - test
+    // directional light - top
+    this.directionalLight = new THREE.DirectionalLight(0xffffff, 1.3);
+    this.directionalLight.position.set(0, 302, 64);
+    this.scene.add(this.directionalLight);
+
+    // directional light - bottom
     this.directionalLight = new THREE.DirectionalLight(0xffffff, 1.3);
     this.directionalLight.position.set(0, -302, 64);
     this.scene.add(this.directionalLight);

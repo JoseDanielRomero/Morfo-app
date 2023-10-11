@@ -136,6 +136,20 @@ function App() {
       "mesialPosition": [-200, 0, 90, 13.5],
       "distalPosition": [200, 0, -90, 13.5],
       "scene": [-11, -59, -170]
+    },
+    {
+      "name": "Incisivo lateral inferior",
+      "description": "Este diente es el segundo   incisivo a partir de la línea media mandibular a derecha e izquierda. Se parece tanto al incisivo central que sólo describiremos brevemente sus características, pues se puede comparar directamente con el incisivo central y resaltar sus diferencias. Los dos incisivos funcionan en la arcada dental como un conjunto; por ello, su forma funcional es similar. Como en el incisivo central, el incisivo lateral es uniforme si se compara con otros dientes.",
+      "id": 10,
+      "arch": "mandibular",
+      "type": "anterior",
+      "folderName": "mandibular-lateral",
+      "initialPosition": [0, -50, 120, 23],
+      "palatalPosition": [-5, 50, -80, 33],
+      "incisalPosition": [0, 120, 40, 24],
+      "mesialPosition": [-200, 10, 50, 14],
+      "distalPosition": [200, 10, -50, 14.5],
+      "scene": [1, -53, -165]
     }
   ]
 
@@ -400,6 +414,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma trapezoidal con base en incisal. La superficie es aplanada, ligeramente convexa en cervical. No presenta líneas de desarrollo ni de imbricación (periquimatos).",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "De aspecto trapezoidal con base mayor en incisal. Es de menor tamaño que la cara labial por la convergencia de las caras proximales hacia lingual, la superficie es homogéneamente convexa en el tercio cervical por la presencia del cíngulo. El tercio medio e incisal presenta una leve concavidad en donde se localiza la fosa lingual delimitada por unas tenues crestas marginales.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "De forma triangular con base en cervical. La superficie es plana y con una concavidad en la porción centrocervical. Su perfil vestibular es curvo en el tercio cervical. El perfil lingual es ligeramente más marcado que en el incisivo central inferior pero menos que en los superiores.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "De forma triangular con base en cervical. Los tercios medio e incisal son poco convexos y el tercio cervical es cóncavo.",
+          "id": 4
+        },
+        {
+          "title": "INCISAL",
+          "text": "Presenta en el borde una pequeña elevación en la unión entre el lóbulo central y mesial, que en ocasiones coincide con el surco interdentario entre el incisivo central y el lateral superior.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -420,6 +463,7 @@ function App() {
           <Route path='/maxillary/maxillary-second-molar' element={<TeethPage data={database[6]} surfaces={surfacesInfo[6]} />} />
           <Route path='/maxillary/maxillary-third-molar' element={<TeethPage data={database[7]} surfaces={surfacesInfo[7]} />} />
           <Route path='/maxillary/mandibular-central' element={<TeethPage data={database[8]} surfaces={surfacesInfo[8]} />} />
+          <Route path='/maxillary/mandibular-lateral' element={<TeethPage data={database[9]} surfaces={surfacesInfo[9]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
