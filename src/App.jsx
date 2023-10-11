@@ -94,6 +94,20 @@ function App() {
       "mesialPosition": [-50, 0, 120, 20],
       "distalPosition": [40, -10, -120, 20],
       "scene": [-48, -91, -120]
+    },
+    {
+      "name": "Segundo molar superior",
+      "description": "El segundo molar maxilar complementa la función del primer molar, y al describirlo se pueden establecer comparaciones directas con el primer molar, tanto en su forma como en su desarrollo.",
+      "id": 7,
+      "arch": "maxillary",
+      "type": "posterior",
+      "folderName": "maxillary-second-molar",
+      "initialPosition": [150, -20, 60, 33],
+      "palatalPosition": [-125, 20, -40, 39.5],
+      "incisalPosition": [22, -970, 4, 5.5],
+      "mesialPosition": [-50, 0, 120, 42],
+      "distalPosition": [40, -10, -120, 42],
+      "scene": [-120, -212, -210]
     }
   ]
 
@@ -267,7 +281,36 @@ function App() {
         },
         {
           "title": "OCLUSAL",
-          "text": "Es de forma romboidal, con dos ángulos agudos en mesiovestibular y distopalatino, así como dos ángulos obtusos: en mesiopalatino y distovestibular. Las eminencias se presentan dos vestibulares y dos palatinas. A continuación se describen sus componentes: Cúspide mesiovestibular y cúspide distovestibular, Cúspide mesiopalatina, Cúspide distopalatina, Tubérculo de Carabelli, Cresta oblicua y crestas marginales, Depresiones de la cara oclusal",
+          "text": "Es de forma romboidal, con dos ángulos agudos en mesiovestibular y distopalatino, así como dos ángulos obtusos: en mesiopalatino y distovestibular. Las eminencias se presentan dos vestibulares y dos palatinas. A continuación se describen sus componentes: Cúspide mesiovestibular y cúspide distovestibular, Cúspide mesiopalatina, Cúspide distopalatina, Tubérculo de Carabelli, Cresta oblicua y crestas marginales, Depresiones de la cara oclusal.",
+          "id": 5
+        }
+      ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Tiene forma trapezoidal con base en oclusal. En el tercio medio y oclusal se encuentra un surco llamado oclusovestibular.",
+          "id": 1
+        },
+        {
+          "title": "PALATINO",
+          "text": "Cuando la fisonomía es de cuatro cúspides, la cara palatina tiene forma trapezoidal irregular con base en oclusal. En esta superficie se presenta un surco que viene desde oclusal hasta el tercio medio de esta cara. Cuando la fisonomía de este molar es tricúspide la superficie de la cara palatina es convexa en forma pentagonal o circular.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "De forma cuadrilátera, alargadas de vestibular a palatina y presentan una superficie aplanada y convexa más marcada en el tercio oclusal.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "De forma cuadrilátera, alargadas de vestibular a palatina y presentan una superficie aplanada y convexa más marcada en el tercio oclusal.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Puede presentar tres variantes. Las tres variantes presentan una fosa central, surcos fundamentales y fosetas triangulares profundas: Forma romboidal (Presenta cuatro cúspides, dos vestibulares y dos palatinas. Es la más frecuente.) / Forma trilobular (Presenta tres cúspides, dos vestibulares de base cuadrangular y una palatina de base triangular.) / Forma romboidal (De mayor dimensión. Las cúspides se ven más alargadas en sentido vestíbulopalatino y angostas mesiodistalmente, en comparación a la variante uno. Es la forma menos frecuente.)",
           "id": 5
         }
       ]
@@ -288,6 +331,7 @@ function App() {
           <Route path='/maxillary/maxillary-first-premolar' element={<TeethPage data={database[3]} surfaces={surfacesInfo[3]} />} />
           <Route path='/maxillary/maxillary-second-premolar' element={<TeethPage data={database[4]} surfaces={surfacesInfo[4]} />} />
           <Route path='/maxillary/maxillary-first-molar' element={<TeethPage data={database[5]} surfaces={surfacesInfo[5]} />} />
+          <Route path='/maxillary/maxillary-second-molar' element={<TeethPage data={database[6]} surfaces={surfacesInfo[6]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
