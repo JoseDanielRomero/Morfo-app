@@ -108,6 +108,20 @@ function App() {
       "mesialPosition": [-50, 0, 120, 42],
       "distalPosition": [40, -10, -120, 42],
       "scene": [-120, -212, -210]
+    },
+    {
+      "name": "Tercer molar superior",
+      "description": "Éste aparece en muchas ocasiones como una anomalía del desarrollo, y varía considerablemente en tamaño, contorno y posición relativa con los otros dientes. Rara vez está tan bien desarrollado como el segundo molar maxilar con el cual mantiene cierta semejanza. El tercer molar complementa la función del segundo molar y su diseño fundamental es similar. Por regla general, la corona es más pequeña y las raíces, más cortas, con tendencia a fusionarse y anclarse como una única raíz cónica.",
+      "id": 8,
+      "arch": "maxillary",
+      "type": "posterior",
+      "folderName": "maxillary-third-molar",
+      "initialPosition": [150, 20, 40, 32],
+      "palatalPosition": [-125, 20, -40, 43],
+      "incisalPosition": [22, -970, 4, 5.5],
+      "mesialPosition": [-50, 0, 120, 41],
+      "distalPosition": [40, -10, -120, 41],
+      "scene": [-150, -240, -110]
     }
   ]
 
@@ -314,6 +328,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "La corona es más corta cervicooclusalmente, y más estrecha, mesiodistalmente, que la del segundo molar. Las raíces acostumbran a estar fusionadas funcionando como una raíz larga, son más cortas cervicoapicalmente, y acaban en un extremo cónico.",
+          "id": 1
+        },
+        {
+          "title": "PALATINO",
+          "text": "Además de las diferencias mencionadas, en comparación con el segundo molar maxilar, aquí solamente existe una gran cúspide lingual y no se observa ningún surco lingual. Sin embargo, en muchos casos, se puede presentar lo contrario un tercer molar con una cúspide distolingual poco desarrollada, y con un surco de desarrollo lingual.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Aquí, junto a las diferencias de tamaño, la característica principal es la conicidad de las raíces fusionadas y la presencia de una bifurcación, generalmente en el tercio apical.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Desde esta cara se ve gran parte de la cara vestibular, y la superficie oclusal que queda a la vista es mayor que en el segundo molar debido a la mayor angulación de la cara oclusal en relación al eje mayor de la raíz. La distancia entre la línea cervical y la cresta marginal es corta.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "La cara oclusal típica del tercer molar tiene forma de corazón. La cúspide lingual es grande y está bien desarrollada, y la distolingual es pequeña o no existe con lo que el contorno del diente desde un área de contacto a la otra tiene aspecto de semicírculo. Este tipo de diente tiene tres cúspides funcionales: dos vestibulares y una lingual. La cara oclusal de este diente presenta, frecuentemente, muchos surcos suplementarios y muchos surcos accidentales, excepto si el diente está muy desgastado.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -332,6 +375,7 @@ function App() {
           <Route path='/maxillary/maxillary-second-premolar' element={<TeethPage data={database[4]} surfaces={surfacesInfo[4]} />} />
           <Route path='/maxillary/maxillary-first-molar' element={<TeethPage data={database[5]} surfaces={surfacesInfo[5]} />} />
           <Route path='/maxillary/maxillary-second-molar' element={<TeethPage data={database[6]} surfaces={surfacesInfo[6]} />} />
+          <Route path='/maxillary/maxillary-third-molar' element={<TeethPage data={database[7]} surfaces={surfacesInfo[7]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
