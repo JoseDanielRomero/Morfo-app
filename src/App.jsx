@@ -178,6 +178,20 @@ function App() {
       "mesialPosition": [-200, 10, 220, 10],
       "distalPosition": [200, 10, -180, 11],
       "scene": [-35, -50, -135]
+    },
+    {
+      "name": "Segundo premolar inferior",
+      "description": "Se parece al primero solamente por su cara vestibular. La cúspide vestibular no es tan pronunciada, pero el diámetro mesiodistal de la corona y su perfil general son semejantes. En las otras caras, el diente es mavor y está más desarrollado. Existen dos formas comunes. La primera, que probablemente es la más frecuente, es del tipo tricúspide, con aspecto más anguloso visto por su cara oclusal. La segunda forma es del tipo bicúspide, con un aspecto oclusal más redondeado.",
+      "id": 13,
+      "arch": "mandibular",
+      "type": "posterior",
+      "folderName": "mandibular-second-premolar",
+      "initialPosition": [90, 10, 70, 52],
+      "palatalPosition": [-95, 30, -50, 53],
+      "incisalPosition": [40, 350, 20, 17],
+      "mesialPosition": [-200, 10, 290, 17.5],
+      "distalPosition": [200, 10, -290, 18],
+      "scene": [-84, -120, -285]
     }
   ]
 
@@ -529,6 +543,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es muy parecida en forma, al primer premolar. Sin embargo, en algunas ocasiones es un poco mayor.",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "Esta cara presenta dos tipos de variantes: con dos cúspides linguales o con una cúspide casi a la misma altura que la vestibular.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Es de forma trapezoidal, aplanada y de superficie mayor que el primer premolar. Su perfil oclusal no es tan inclinado debido a que la cúspide lingual es más alta.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Es muy parecida a la cara mesial, pero de mayor convexidad en el tercio oclusal.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Su contorno es de forma circular, de mayor superficie que el primer premolar. Puede presentar dos o tres cúspides. El surco fundamental puede tener tres variantes: En forma de H, en forma de U y en forma de Y.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -552,6 +595,7 @@ function App() {
           <Route path='/maxillary/mandibular-lateral' element={<TeethPage data={database[9]} surfaces={surfacesInfo[9]} />} />
           <Route path='/maxillary/mandibular-canine' element={<TeethPage data={database[10]} surfaces={surfacesInfo[10]} />} />
           <Route path='/maxillary/mandibular-first-premolar' element={<TeethPage data={database[11]} surfaces={surfacesInfo[11]} />} />
+          <Route path='/maxillary/mandibular-second-premolar' element={<TeethPage data={database[12]} surfaces={surfacesInfo[12]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
