@@ -192,6 +192,20 @@ function App() {
       "mesialPosition": [-200, 10, 290, 17.5],
       "distalPosition": [200, 10, -290, 18],
       "scene": [-84, -120, -285]
+    },
+    {
+      "name": "Primer molar inferior",
+      "description": "Normalmente, es el diente más grande de la arcada inferior. Tiene cinco cúspides bien desarrolladas: dos vestibulares, dos linguales y una distal. Tiene dos raíces, una mesial y otra distal bien desarrolladas, muy anchas vestibulolingualmente, y considerablemente separadas en los ápices.",
+      "id": 14,
+      "arch": "mandibular",
+      "type": "posterior",
+      "folderName": "mandibular-first-molar",
+      "initialPosition": [90, 10, 70, 52],
+      "palatalPosition": [-95, 0, -50, 54.5],
+      "incisalPosition": [40, 350, 20, 17],
+      "mesialPosition": [-200, 10, 290, 17.5],
+      "distalPosition": [200, 10, -350, 15],
+      "scene": [-54, -162, -235]
     }
   ]
 
@@ -572,6 +586,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma trapezoidal, de mayor dimensión en oclusal que en cervical. Generalmente es convexa y se encuentra dividida por el surco oclusovestibular que separa las cúspides mesiovestibular de la centrovestibular. El tercio medio y oclusal tiene gran convergencia hacia oclusal, y en este tercio oclusal es donde se encuentra el área de trabajo.",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "Es de forma trapezoidal, convexa de cervical a oclusal, de menor dimensión mesiodistal. Esta cara presenta dos cúspides separadas por el surco oclusolingual que se encuentra casi en el centro de la cara.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Es una superficie de forma romboidal, ligeramente convexa.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Es más pequeña y convexa que la cara mesial. La eminencia distovestibular ocasiona que la superficie vestibular tenga convergencia hacia distal.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Esta cara es de forma de trapecio irregular. La cara oclusal presenta cinco cúspides, tres vestibulares y dos linguales, el surco fundamental, y tres surcos secundarios, una fosa central y dos fosetas triangulares.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -596,6 +639,7 @@ function App() {
           <Route path='/maxillary/mandibular-canine' element={<TeethPage data={database[10]} surfaces={surfacesInfo[10]} />} />
           <Route path='/maxillary/mandibular-first-premolar' element={<TeethPage data={database[11]} surfaces={surfacesInfo[11]} />} />
           <Route path='/maxillary/mandibular-second-premolar' element={<TeethPage data={database[12]} surfaces={surfacesInfo[12]} />} />
+          <Route path='/maxillary/mandibular-first-molar' element={<TeethPage data={database[13]} surfaces={surfacesInfo[13]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
