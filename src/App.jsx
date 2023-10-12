@@ -206,6 +206,20 @@ function App() {
       "mesialPosition": [-200, 10, 290, 17.5],
       "distalPosition": [200, 10, -350, 15],
       "scene": [-54, -162, -235]
+    },
+    {
+      "name": "Segundo molar inferior",
+      "description": "Normalmente, el segundo molar es más pequeño que el primero en todas sus medidas; pero solamente en décimas de milímetro. Sin embargo, en ocasiones varía su forma, y no es infrecuente encontrar segundos molares mandibulares con las coronas algo más grandes que los primeros molares, y aunque las raíces no estén tan bien formadas, pueden ser más largas. La corona tiene cuatro cúspides bien desarrolladas, dos vestibulares y dos linguales, de tamaño parecido. No se ve nunca una cúspide distal, ni quinta cúspide, pero la cúspide distovestibular es mayor que la del primer molar.",
+      "id": 15,
+      "arch": "mandibular",
+      "type": "posterior",
+      "folderName": "mandibular-second-molar",
+      "initialPosition": [90, 0, 20, 61],
+      "palatalPosition": [-95, 0, -20, 58.5],
+      "incisalPosition": [40, 350, 5, 16.5],
+      "mesialPosition": [-80, 10, 290, 19],
+      "distalPosition": [30, 10, -290, 20],
+      "scene": [-115, -139, -185]
     }
   ]
 
@@ -615,6 +629,35 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "Es de forma trapezoidal con base mayor en oclusal. La superficie es convexa, dividida por el surco oclusovestibular. Presenta dos cúspides vestibulares, la cúspide distovestibular es más ancha que la mesiovestibular.",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "Muy convexa en ambos sentidos, solo que más pequeña que la del primer molar inferior. Es de forma trapezoidal con base mayor en oclusal, las caras proximales convergen hacia cervical. El surco oclusolingual separa la superficie en el tercio oclusal.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "De forma romboidal, de superficie poco convexa. El punto de contacto se encuentra equidistante de vestibular y lingual en el tercio oclusal.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "Esta superficie es menor que su cara mesial. Esta cara es muy convexa de vestibular a lingual y ligeramente más plana de cervical a oclusal.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "Es de forma cuadrilátera, de mayor dimensión mesiodistal, ligeramente mayor de lado mesial que el distal. Tiene cuatro cúspides, las cuales son casi iguales en tamaño, separadas por surcos formando una cruz.",
+          "id": 5
+        }
+      ]
     }
 
   ]
@@ -640,6 +683,7 @@ function App() {
           <Route path='/maxillary/mandibular-first-premolar' element={<TeethPage data={database[11]} surfaces={surfacesInfo[11]} />} />
           <Route path='/maxillary/mandibular-second-premolar' element={<TeethPage data={database[12]} surfaces={surfacesInfo[12]} />} />
           <Route path='/maxillary/mandibular-first-molar' element={<TeethPage data={database[13]} surfaces={surfacesInfo[13]} />} />
+          <Route path='/maxillary/mandibular-second-molar' element={<TeethPage data={database[14]} surfaces={surfacesInfo[14]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
