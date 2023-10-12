@@ -220,6 +220,20 @@ function App() {
       "mesialPosition": [-80, 10, 290, 19],
       "distalPosition": [30, 10, -290, 20],
       "scene": [-115, -139, -185]
+    },
+    {
+      "name": "Tercer molar inferior",
+      "description": "Varía considerablemente en los diferentes individuos y presenta muchas anomalías, tanto de forma como de posición. Complementa la función del segundo molar, y aunque rara vez está bien desarrollado, el tercer molar más habitual muestra un desarrollo irregular de la porción coronal, con raíces pequeñas más o menos malformadas. No obstante, su diseño sigue el patrón de todos los molares mandibulares quedando más cerca del segundo molar mandibular en cuanto al número de cúspides y a la forma oclusal, que del primer molar mandibular.",
+      "id": 16,
+      "arch": "mandibular",
+      "type": "posterior",
+      "folderName": "mandibular-third-molar",
+      "initialPosition": [90, 10, 20, 56],
+      "palatalPosition": [-95, -10, -20, 51],
+      "incisalPosition": [40, 350, 10, 14.5],
+      "mesialPosition": [-80, 10, 290, 17],
+      "distalPosition": [70, 10, -290, 17.5],
+      "scene": [-105, -172.5, -120]
     }
   ]
 
@@ -658,8 +672,36 @@ function App() {
           "id": 5
         }
       ]
+    },
+    {
+      "infoBoxes": [
+        {
+          "title": "VESTIBULAR",
+          "text": "El perfil de la corona sigue la norma general de todos los molares mandibulares. La corona es más ancha en las áreas de contacto mesiodistal que en el cuello, las cúspides vestibulares son cortas y redondeadas y la cresta del contorno mesial y distal está a una distancia un poco mayor que la mitad de la distancia entre la línea cervical y la punta de las cúspides.",
+          "id": 1
+        },
+        {
+          "title": "LINGUAL",
+          "text": "En relación con la cara vestibular, poca cosa se puede añadir al describir la cara lingual. El tercer molar mandibular, cuando está bien desarrollado, se parece ordinariamente a la forma del segundo molar, excepto en el tamaño y en el desarrollo de las raíces.",
+          "id": 2
+        },
+        {
+          "title": "MESIAL",
+          "text": "Por esta cara, el diente se parece al segundo molar mandibular, excepto en las dimensiones. Por supuesto, las raíces son más cortas, la mesial más cónica desde el cuello hasta el ápice. Normalmente, el ápice de la raíz mesial es más puntiagudo.",
+          "id": 3
+        },
+        {
+          "title": "DISTAL",
+          "text": "El aspecto anatómico de la mitad distal del diente es muy parecido al del segundo molar, excepto en las dimensiones.",
+          "id": 4
+        },
+        {
+          "title": "OCLUSAL",
+          "text": "La cara oclusal, en los casos en que el tercer molar mandibular esté bien desarrollado, con una alineación correcta que consiga una buena oclusión, es muy parecida a la del segundo molar mandibular. Tiende a un perfil más redondeado y una distancia vestibulolingual más pequeña en la mitad distal.",
+          "id": 5
+        }
+      ]
     }
-
   ]
 
   const [actualPosition, setActualPosition] = useState([])
@@ -684,6 +726,7 @@ function App() {
           <Route path='/maxillary/mandibular-second-premolar' element={<TeethPage data={database[12]} surfaces={surfacesInfo[12]} />} />
           <Route path='/maxillary/mandibular-first-molar' element={<TeethPage data={database[13]} surfaces={surfacesInfo[13]} />} />
           <Route path='/maxillary/mandibular-second-molar' element={<TeethPage data={database[14]} surfaces={surfacesInfo[14]} />} />
+          <Route path='/maxillary/mandibular-third-molar' element={<TeethPage data={database[15]} surfaces={surfacesInfo[15]} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
