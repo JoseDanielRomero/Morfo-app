@@ -18,12 +18,12 @@ function App() {
       "arch": "maxillary",
       "type": "anterior",
       "folderName": "maxillary-central",
-      "initialPosition": [0, 0, 60, 45],
+      "initialPosition": [0, 0, 60, 43],
       "palatalPosition": [0, -30, -60, 45],
       "incisalPosition": [5, -260, 60, 11],
-      "mesialPosition": [-200, 0, 10, 15],
-      "distalPosition": [200, 0, -60, 15],
-      "scene": [0, -90, -180]
+      "mesialPosition": [-200, 0, 10, 14],
+      "distalPosition": [200, 0, -60, 14],
+      "scene": [0, -91, -180]
     },
     {
       "name": "Incisivo lateral superior",
@@ -32,12 +32,12 @@ function App() {
       "arch": "maxillary",
       "type": "anterior",
       "folderName": "maxillary-lateral",
-      "initialPosition": [20, 10, 60, 45],
-      "palatalPosition": [-5, -30, -60, 45],
+      "initialPosition": [20, 10, 60, 45.5],
+      "palatalPosition": [-20, -30, -60, 39],
       "incisalPosition": [15, -260, 60, 11],
-      "mesialPosition": [-200, 0, 30, 15],
-      "distalPosition": [200, 0, -60, 15],
-      "scene": [-20, -103, -200]
+      "mesialPosition": [-200, 0, 30, 14.5],
+      "distalPosition": [200, 0, -60, 14],
+      "scene": [-15, -103, -200]
     },
     {
       "name": "Canino superior",
@@ -47,8 +47,8 @@ function App() {
       "type": "anterior",
       "folderName": "maxillary-canine",
       "initialPosition": [30, -10, 60, 42],
-      "palatalPosition": [-35, -30, -60, 38],
-      "incisalPosition": [35, -260, 60, 11],
+      "palatalPosition": [-35, -30, -60, 36],
+      "incisalPosition": [35, -260, 40, 11],
       "mesialPosition": [-200, 0, 120, 13],
       "distalPosition": [200, 0, -120, 13],
       "scene": [-27, -84, -170]
@@ -60,12 +60,12 @@ function App() {
       "arch": "maxillary",
       "type": "posterior",
       "folderName": "maxillary-first-premolar",
-      "initialPosition": [160, 20, 60, 17],
+      "initialPosition": [160, 20, 60, 16],
       "palatalPosition": [-190, -10, -60, 14],
-      "incisalPosition": [35, -260, 10, 11],
-      "mesialPosition": [-50, -30, 120, 23],
-      "distalPosition": [50, -30, -120, 21],
-      "scene": [-41, -99, -160]
+      "incisalPosition": [35, -260, 10, 10.5],
+      "mesialPosition": [-50, -30, 120, 20],
+      "distalPosition": [50, -30, -120, 20.5],
+      "scene": [-41, -99.5, -165]
     },
     {
       "name": "Segundo premolar superior",
