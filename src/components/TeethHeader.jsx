@@ -10,7 +10,7 @@ function TeethHeader({ description, name }) {
       <div className='h-full w-full flex flex-col items-start justify-between pt-10'>
         <div className='h-auto w-full flex flex-col items-end justify-start order-2 md:order-1'>
           <div className='h-auto lg:w-1/3 md:w-1/2 w-full flex flex-col items-start justify-start gap-3'>
-            <img src={logoWhiteNoFill} className='object-cover h-[28px] w-[28px]' />
+            <img src={logoWhiteNoFill} className='object-cover h-[24px] w-[24px] lg:h-[28px] lg:w-[28px]' />
             <p className='font-inter font-normal text-[1rem] text-white leading-tight'>{description}</p>
           </div>
         </div>
