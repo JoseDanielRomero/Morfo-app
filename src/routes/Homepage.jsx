@@ -1,9 +1,12 @@
 import React from 'react'
 import bgImage from '../images/background-desktop2.png'
+import bgFooter from '../images/background-footer.png'
 import bgSection1 from '../images/mockup-ipad.png'
 import Navbar from '../components/Navbar';
 import logoWhiteNoFill from '../images/tooth-2.png'
 import hand from '../images/hand.png'
+import loudspeaker from '../images/loudspeaker.png'
+import logoWhiteFill from '../images/tooth-4.png'
 import { Link } from 'react-router-dom';
 
 function Homepage() {
@@ -27,14 +30,14 @@ function Homepage() {
             <h1 className='text-transparent text-xl text-white font-unbounded font-light leading-tight mb-2'>
               Morfo app, plataforma educativa de Morfología dental
             </h1>
-            <h1 className='text-transparent text-[2.5rem] md:text-5xl text-white font-unbounded font-normal leading-none'>
+            <h1 className='text-transparent text-[2.5rem] md:text-5xl text-white font-unbounded font-normal leading-none drop-shadow-sm'>
               Simple. Interactiva. Para todos. 
             </h1>
           </div>
         </div>
       </header>
       <main>
-      <section className='h-auto w-screen bg-[#111111] flex flex-col sm:flex-row items-start justify-start sm:justify-between gap-4 lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10'>
+        <section className='h-auto w-screen bg-[#111111] flex flex-col sm:flex-row items-start justify-start sm:justify-between sm:gap-4 gap-8 lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10'>
           <div className='h-auto w-auto sm:w-1/2 lg:w-2/3 flex flex-col gap-4'>
             <h1 className='text-transparent text-xl text-purple-500 font-unbounded font-light leading-tight mb-0 md:mb-2'>
               Didáctica al máximo
@@ -57,7 +60,30 @@ function Homepage() {
             Sin descargas de apps, ni pre-registros.
           </p>
         </section>
+        <section className='h-auto w-screen bg-[#111111] flex flex-col sm:flex-row items-start justify-start sm:justify-between sm:gap-4 gap-0 lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10'>
+          <div className='h-auto w-auto sm:w-1/2 lg:w-2/3 flex flex-col gap-4'>
+            <h1 className='text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-200 via-purple-500 to-pink-600 font-unbounded font-light leading-none mb-0 md:mb-2'>
+              Recomienda Morfo app
+            </h1>
+            <p className='font-inter font-normal text-[1.1rem] text-white leading-tight'>
+              El objetivo de Morfo app es aportar a toda la comunidad odontológica, desde estudiantes que están teniendo su primer contacto con la Morfología dental hasta odontológos actualizados y en constante entrenamiento.<br></br>
+              Si esta web te pareció un aporte, recomiéndala y compártela con los demás.
+            </p>
+          </div>
+          <div className='h-auto w-full sm:w-auto sm:1/2 lg:w-1/3 sm:h-auto flex flex-col items-center justify-center sm:items-end'>
+            <img src={loudspeaker} className='object-cover h-[300px] w-[300px] sm:h-[330px] sm:w-[330px]' />
+          </div>
+        </section>
       </main>
+      <footer className='h-auto w-screen bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-center justify-center lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10 gap-2' style={{backgroundImage: `url(${bgFooter})`}}>
+        <div className='h-full w-auto flex flex-row items-center gap-2 cursor-pointer' onClick={()=>handleClickToRedirect('/#/')}>
+          <img src={logoWhiteFill} className='object-cover h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]' />
+          <h3 className='font-unbounded font-semibold text-[1.2rem] lg:text-[1.3rem] text-white'>Morfo app</h3>
+        </div>
+        <h1 className='text-transparent text-[1rem] lg:text-[1.1rem] text-white font-unbounded font-light leading-tight mb-4 text-center'>
+          Diseñada y desarrollada por José Romero © 2023
+        </h1>
+      </footer>
     </>
   )
 }
