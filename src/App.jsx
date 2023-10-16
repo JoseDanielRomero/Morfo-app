@@ -112,7 +112,7 @@ function App() {
     },
     {
       "name": "Tercer molar superior",
-      "description": "Éste aparece en muchas ocasiones como una anomalía del desarrollo, y varía considerablemente en tamaño, contorno y posición relativa con los otros dientes. Rara vez está tan bien desarrollado como el segundo molar maxilar con el cual mantiene cierta semejanza. El tercer molar complementa la función del segundo molar y su diseño fundamental es similar. Por regla general, la corona es más pequeña y las raíces, más cortas, con tendencia a fusionarse y anclarse como una única raíz cónica.",
+      "description": "Éste aparece en muchas ocasiones como una anomalía del desarrollo, y varía considerablemente en tamaño, contorno y posición relativa con los otros dientes. Rara vez está tan bien desarrollado como el segundo molar maxilar con el cual mantiene cierta semejanza. El tercer molar complementa la función del segundo molar y su diseño fundamental es similar.",
       "id": 8,
       "arch": "maxillary",
       "type": "posterior",
@@ -168,7 +168,7 @@ function App() {
     },
     {
       "name": "Primer premolar inferior",
-      "description": "Es el cuarto diente a partir de la línea media, y el primer diente posterior de la mandíbula. Está situado entre el canino y el segundo premolar y presenta características comunes a ambos. Las particularidades que lo asemejan al canino mandibular son las siguientes: La cúspide vestibular es larga y puntiaguda y es la única que ocluye. / El diámetro vestibulolingual es semejante al del canino. 3. Las superficie oclusal desciende marcadamente hacia lingual y cervical. / La cresta de la cúspide mesiovestibular es más corta que la de la distovestibular. / El perfil de la cara oclusal se parece al de la cara incisal del canino.",
+      "description": "Es el cuarto diente a partir de la línea media, y el primer diente posterior de la mandíbula. Las particularidades que lo asemejan al canino mandibular son las siguientes: La cúspide vestibular es larga y puntiaguda y es la única que ocluye. / El diámetro vestibulolingual es semejante al del canino. 3. Las superficie oclusal desciende marcadamente hacia lingual y cervical. / La cresta de la cúspide mesiovestibular es más corta que la de la distovestibular. / El perfil de la cara oclusal se parece al de la cara incisal del canino.",
       "id": 12,
       "arch": "mandibular",
       "type": "posterior",
@@ -210,7 +210,7 @@ function App() {
     },
     {
       "name": "Segundo molar inferior",
-      "description": "Normalmente, el segundo molar es más pequeño que el primero en todas sus medidas; pero solamente en décimas de milímetro. Sin embargo, en ocasiones varía su forma, y no es infrecuente encontrar segundos molares mandibulares con las coronas algo más grandes que los primeros molares, y aunque las raíces no estén tan bien formadas, pueden ser más largas. La corona tiene cuatro cúspides bien desarrolladas, dos vestibulares y dos linguales, de tamaño parecido. No se ve nunca una cúspide distal, ni quinta cúspide, pero la cúspide distovestibular es mayor que la del primer molar.",
+      "description": "Normalmente, el segundo molar es más pequeño que el primero en todas sus medidas; pero solamente en décimas de milímetro. La corona tiene cuatro cúspides bien desarrolladas, dos vestibulares y dos linguales, de tamaño parecido. No se ve nunca una cúspide distal, ni quinta cúspide, pero la cúspide distovestibular es mayor que la del primer molar.",
       "id": 15,
       "arch": "mandibular",
       "type": "posterior",

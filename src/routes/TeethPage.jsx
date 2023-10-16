@@ -154,7 +154,7 @@ function TeethPage({ data, surfaces }) {
           <section className='h-auto w-full pt-8 grid grid-cols-2 gap-3'>
             <div className='h-auto w-auto flex flex-col items-start'>
               {paths[actualToothIndex - 1] &&
-                <Link to={`/${paths[actualToothIndex - 1]}`} className='h-full w-auto flex flex-row gap-2 px-6 py-2 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 items-center justify-center cursor-pointer transition ease-in-out'>
+                <Link to={`/${paths[actualToothIndex - 1]}`} className='h-full w-auto flex flex-row gap-2 px-5 py-2 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 items-center justify-center cursor-pointer transition ease-in-out'>
                   <img src={leftArrow} className='object-cover h-[18px] w-[18px]' />
                   <p className='font-inter font-semibold text-lg text-white'>Anterior</p>
                 </Link>
@@ -162,7 +162,7 @@ function TeethPage({ data, surfaces }) {
             </div>
             <div className='h-auto w-auto flex flex-col items-end'>
               {paths[actualToothIndex + 1] &&
-                <Link to={`/${paths[actualToothIndex + 1]}`} className='h-full w-auto flex flex-row gap-2 px-6 py-2 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 items-center justify-center cursor-pointer transition ease-in-out'>
+                <Link to={`/${paths[actualToothIndex + 1]}`} className='h-full w-auto flex flex-row gap-2 px-5 py-2 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 items-center justify-center cursor-pointer transition ease-in-out'>
                   <p className='font-inter font-semibold text-lg text-white'>Siguiente</p>
                   <img src={rightArrow} className='object-cover h-[18px] w-[18px]' />
                 </Link>

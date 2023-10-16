@@ -39,7 +39,7 @@ function Homepage() {
       <main>
         <section className='h-auto w-screen bg-[#111111] flex flex-col sm:flex-row items-start justify-start sm:justify-between sm:gap-4 gap-8 lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10'>
           <div className='h-auto w-auto sm:w-1/2 lg:w-2/3 flex flex-col gap-4'>
-            <h1 className='text-transparent text-xl text-purple-500 font-unbounded font-light leading-tight mb-0 md:mb-2'>
+            <h1 className='text-xl text-purple-400 font-unbounded font-light leading-tight mb-0 md:mb-2'>
               Didáctica al máximo
             </h1>
             <p className='font-inter font-normal text-[1.1rem] text-white leading-tight'>
@@ -52,7 +52,7 @@ function Homepage() {
           </div>
         </section>
         <section className='h-[500px] w-screen bg-cover bg-center lg:bg-left-center bg-no-repeat flex flex-col items-start justify-start gap-4 lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10' style={{backgroundImage: `url(${bgSection1})`}}>
-          <h1 className='text-transparent text-xl text-purple-700 font-unbounded font-light leading-tight mb-0 md:mb-2'>
+          <h1 className='text-xl text-purple-700 font-unbounded font-light leading-tight mb-0 md:mb-2'>
             Portátil y disponible en 1 solo paso
           </h1>
           <p className='font-inter font-normal text-[1.1rem] w-1/2 md:w-1/3 text-[#111111] leading-tight'>

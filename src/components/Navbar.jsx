@@ -16,10 +16,10 @@ function Navbar() {
       </div>
       <section className='h-full w-auto flex sm:flex-row flex-col items-center sm:gap-14 gap-1'>
         <div onClick={()=>handleClickToRedirect('/#/maxillary')} className='h-auto md:h-full w-auto flex flex-row items-center gap-2 md:hover:border-b-2 md:hover:mt-[2px] hover:border-white cursor-pointer'>
-          <h5 className='font-inter font-normal text-[1.1rem] text-white'>maxilares</h5>
+          <h5 className='font-inter font-normal text-[1.1rem] text-white'>superiores</h5>
         </div>
         <div onClick={()=>handleClickToRedirect('/#/mandibular')} className='h-auto md:h-full flex flex-row items-center gap-2 md:hover:border-b-2 md:hover:mt-[2px] hover:border-white cursor-pointer'>
-          <h5 className='font-inter font-normal text-[1.1rem] text-white'>mandibulares</h5>
+          <h5 className='font-inter font-normal text-[1.1rem] text-white'>inferiores</h5>
         </div>
         <div onClick={()=>handleClickToRedirect('/#/contact')} className='h-full w-auto hidden md:flex flex-row items-center gap-2 hover:border-b-2 hover:mt-[2px] hover:border-white cursor-pointer'>
           <h5 className='font-inter font-normal text-[1.1rem] text-white'>contacto</h5>
