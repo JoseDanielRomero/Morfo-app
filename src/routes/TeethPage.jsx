@@ -9,6 +9,11 @@ import bgArticle2 from '../images/Rectangle2.png'
 import bgArticle3 from '../images/Rectangle3.png'
 import bgArticle4 from '../images/Rectangle4.png'
 import bgArticle5 from '../images/Rectangle5.png'
+import logoWhiteFill from '../images/tooth-4.png'
+import bgFooter from '../images/background-footer.png'
+import leftArrow from '../images/left-arrow.png'
+import rightArrow from '../images/right-arrow.png'
+import { Link } from 'react-router-dom';
 
 function TeethPage({ data, surfaces }) {
 
@@ -16,8 +21,16 @@ function TeethPage({ data, surfaces }) {
   const [actualHeight, setActualHeight] = useState(window.innerHeight*(80/100))
   const [nameIncisal, setNameIncisal] = useState('')
   const [namePalatal, setNamePalatal] = useState('')
+  const [actualToothIndex, setActualToothIndex] = useState('')
+
+  const paths = [
+    'maxillary-central', 'maxillary-lateral', 'maxillary-canine', 'maxillary-first-premolar', 'maxillary-second-premolar', 'maxillary-first-molar', 'maxillary-second-molar', 'maxillary-third-molar', 'mandibular-central', 'mandibular-lateral', 'mandibular-canine', 'mandibular-first-premolar', 'mandibular-second-premolar', 'mandibular-first-molar', 'mandibular-second-molar', 'mandibular-third-molar'
+  ]
 
   useEffect(() => {
+
+    window.scrollTo(0, 0);
+
     if (data.arch == 'maxillary') {
       setNamePalatal('Palatino')
     } else {
@@ -33,6 +46,8 @@ function TeethPage({ data, surfaces }) {
     // NOTE: Reset position to initial.
     setActualPosition(data.initialPosition)
 
+    setActualToothIndex(paths.indexOf(data.folderName))
+
   },[data])
 
   useEffect(() => {
@@ -45,7 +60,6 @@ function TeethPage({ data, surfaces }) {
     const glftLoader = new GLTFLoader();
     glftLoader.load(`../../assets/${data.folderName}/scene.gltf`, (gltfScene) => {
       loadedModel = gltfScene;
-      console.log(loadedModel);
 
       gltfScene.scene.position.x = data.scene[0];
       gltfScene.scene.position.y = data.scene[1];
@@ -103,41 +117,69 @@ function TeethPage({ data, surfaces }) {
       <div>
         <canvas id='myThreeJsCanvas' style={{transform: 'translate(10%, 0)'}} />
       </div>
-      <main className='h-[auto] w-full bg-[#111111] absolute lg:pl-20 lg:pr-20 pl-10 pr-10' style={{ marginTop: actualHeight }}>
-        <section className='h-auto w-full grid grid-cols-1 md:grid-cols-2'>
-          {surfaces.infoBoxes.map((surface)=>{
-            var background;
-            const assignBackground = () => {
-              switch (surface.id) {
-                case 1:
-                  background = bgArticle1;
-                  break;
-                case 2:
-                  background = bgArticle2;
-                  break;
-                case 3:
-                  background = bgArticle3;
-                  break;
-                case 4:
-                  background = bgArticle4;
-                  break;
-                case 5:
-                  background = bgArticle5;
-                  break;
+      <div className='h-[auto] w-full bg-[#111111] absolute' style={{ marginTop: actualHeight }}>
+        <main className='h-[auto] w-full lg:pl-20 lg:pr-20 pl-10 pr-10 mb-20'>
+          <section className='h-auto w-full grid grid-cols-1 md:grid-cols-2'>
+            {surfaces.infoBoxes.map((surface)=>{
+              var background;
+              const assignBackground = () => {
+                switch (surface.id) {
+                  case 1:
+                    background = bgArticle1;
+                    break;
+                  case 2:
+                    background = bgArticle2;
+                    break;
+                  case 3:
+                    background = bgArticle3;
+                    break;
+                  case 4:
+                    background = bgArticle4;
+                    break;
+                  case 5:
+                    background = bgArticle5;
+                    break;
+                }
               }
-            }
-            assignBackground()
+              assignBackground()
 
-            return (
-              <article key={surface.id} className='h-[auto] w-auto flex flex-col items-start justify-end bg-cover bg-center lg:bg-left-top bg-no-repeat p-8 gap-1' style={{backgroundImage: `url(${background})`}}>
-                <h6 className='font-unbounded font-light text-[1.3rem] text-white'>{surface.title}</h6>
-                <p className='font-inter font-normal text-[1rem] text-white leading-tight'>{surface.text}</p>
-              </article>
-            )
-          })}
-        </section>
-      </main>
-
+              return (
+                <article key={surface.id} className='h-auto w-auto flex flex-col items-start justify-end bg-cover bg-center lg:bg-left-top bg-no-repeat p-8 gap-1' style={{backgroundImage: `url(${background})`}}>
+                  <h6 className='font-unbounded font-light text-[1.3rem] text-white'>{surface.title}</h6>
+                  <p className='font-inter font-normal text-[1rem] text-white leading-tight'>{surface.text}</p>
+                </article>
+              )
+            })}
+          </section>
+          <section className='h-auto w-full pt-8 grid grid-cols-2 gap-3'>
+            <div className='h-auto w-auto flex flex-col items-start'>
+              {paths[actualToothIndex - 1] &&
+                <Link to={`/${paths[actualToothIndex - 1]}`} className='h-full w-auto flex flex-row gap-2 px-6 py-2 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 items-center justify-center cursor-pointer transition ease-in-out'>
+                  <img src={leftArrow} className='object-cover h-[18px] w-[18px]' />
+                  <p className='font-inter font-semibold text-lg text-white'>Anterior</p>
+                </Link>
+              }
+            </div>
+            <div className='h-auto w-auto flex flex-col items-end'>
+              {paths[actualToothIndex + 1] &&
+                <Link to={`/${paths[actualToothIndex + 1]}`} className='h-full w-auto flex flex-row gap-2 px-6 py-2 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 items-center justify-center cursor-pointer transition ease-in-out'>
+                  <p className='font-inter font-semibold text-lg text-white'>Siguiente</p>
+                  <img src={rightArrow} className='object-cover h-[18px] w-[18px]' />
+                </Link>
+              }
+            </div>
+          </section>
+        </main>
+        <footer className='h-auto w-full bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-center justify-center lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10 gap-2' style={{backgroundImage: `url(${bgFooter})`}}>
+          <div className='h-full w-auto flex flex-row items-center gap-2 cursor-pointer'>
+            <img src={logoWhiteFill} className='object-cover h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]' />
+            <h3 className='font-unbounded font-semibold text-[1.2rem] lg:text-[1.3rem] text-white'>Morfo app</h3>
+          </div>
+          <h1 className='text-transparent text-[1rem] lg:text-[1.1rem] text-white font-unbounded font-light leading-tight mb-4 text-center'>
+            Diseñada y desarrollada por José Romero © 2023
+          </h1>
+        </footer>
+      </div>
     </>
   );
 }

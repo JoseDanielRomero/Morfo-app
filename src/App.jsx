@@ -712,22 +712,22 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/maxillary/maxillary-central' element={<TeethPage data={database[0]} surfaces={surfacesInfo[0]} />} />
-          <Route path='/maxillary/maxillary-lateral' element={<TeethPage data={database[1]} surfaces={surfacesInfo[1]} />} />
-          <Route path='/maxillary/maxillary-canine' element={<TeethPage data={database[2]} surfaces={surfacesInfo[2]} />} />
-          <Route path='/maxillary/maxillary-first-premolar' element={<TeethPage data={database[3]} surfaces={surfacesInfo[3]} />} />
-          <Route path='/maxillary/maxillary-second-premolar' element={<TeethPage data={database[4]} surfaces={surfacesInfo[4]} />} />
-          <Route path='/maxillary/maxillary-first-molar' element={<TeethPage data={database[5]} surfaces={surfacesInfo[5]} />} />
-          <Route path='/maxillary/maxillary-second-molar' element={<TeethPage data={database[6]} surfaces={surfacesInfo[6]} />} />
-          <Route path='/maxillary/maxillary-third-molar' element={<TeethPage data={database[7]} surfaces={surfacesInfo[7]} />} />
-          <Route path='/mandibular/mandibular-central' element={<TeethPage data={database[8]} surfaces={surfacesInfo[8]} />} />
-          <Route path='/mandibular/mandibular-lateral' element={<TeethPage data={database[9]} surfaces={surfacesInfo[9]} />} />
-          <Route path='/mandibular/mandibular-canine' element={<TeethPage data={database[10]} surfaces={surfacesInfo[10]} />} />
-          <Route path='/mandibular/mandibular-first-premolar' element={<TeethPage data={database[11]} surfaces={surfacesInfo[11]} />} />
-          <Route path='/mandibular/mandibular-second-premolar' element={<TeethPage data={database[12]} surfaces={surfacesInfo[12]} />} />
-          <Route path='/mandibular/mandibular-first-molar' element={<TeethPage data={database[13]} surfaces={surfacesInfo[13]} />} />
-          <Route path='/mandibular/mandibular-second-molar' element={<TeethPage data={database[14]} surfaces={surfacesInfo[14]} />} />
-          <Route path='/mandibular/mandibular-third-molar' element={<TeethPage data={database[15]} surfaces={surfacesInfo[15]} />} />
+          <Route path='/maxillary-central' element={<TeethPage data={database[0]} surfaces={surfacesInfo[0]} />} />
+          <Route path='/maxillary-lateral' element={<TeethPage data={database[1]} surfaces={surfacesInfo[1]} />} />
+          <Route path='/maxillary-canine' element={<TeethPage data={database[2]} surfaces={surfacesInfo[2]} />} />
+          <Route path='/maxillary-first-premolar' element={<TeethPage data={database[3]} surfaces={surfacesInfo[3]} />} />
+          <Route path='/maxillary-second-premolar' element={<TeethPage data={database[4]} surfaces={surfacesInfo[4]} />} />
+          <Route path='/maxillary-first-molar' element={<TeethPage data={database[5]} surfaces={surfacesInfo[5]} />} />
+          <Route path='/maxillary-second-molar' element={<TeethPage data={database[6]} surfaces={surfacesInfo[6]} />} />
+          <Route path='/maxillary-third-molar' element={<TeethPage data={database[7]} surfaces={surfacesInfo[7]} />} />
+          <Route path='/mandibular-central' element={<TeethPage data={database[8]} surfaces={surfacesInfo[8]} />} />
+          <Route path='/mandibular-lateral' element={<TeethPage data={database[9]} surfaces={surfacesInfo[9]} />} />
+          <Route path='/mandibular-canine' element={<TeethPage data={database[10]} surfaces={surfacesInfo[10]} />} />
+          <Route path='/mandibular-first-premolar' element={<TeethPage data={database[11]} surfaces={surfacesInfo[11]} />} />
+          <Route path='/mandibular-second-premolar' element={<TeethPage data={database[12]} surfaces={surfacesInfo[12]} />} />
+          <Route path='/mandibular-first-molar' element={<TeethPage data={database[13]} surfaces={surfacesInfo[13]} />} />
+          <Route path='/mandibular-second-molar' element={<TeethPage data={database[14]} surfaces={surfacesInfo[14]} />} />
+          <Route path='/mandibular-third-molar' element={<TeethPage data={database[15]} surfaces={surfacesInfo[15]} />} />
           <Route path='/maxillary' element={<MaxillaryPage />} />
         </Routes>
       </HashRouter>
