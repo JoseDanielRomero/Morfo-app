@@ -705,6 +705,100 @@ function App() {
     }
   ]
 
+  const maxillaryData = {
+    "title": "Dientes superiores",
+    "description": "Navega entre las piezas dentarias de la arcada superior (todos los dientes en Morfo app corresponden a la hemiarcada izquierda).",
+    "teeth": [
+      {
+        "name": "Incisivo central superior",
+        "path": "maxillary-central",
+        "id": 1
+      },
+      {
+        "name": "Incisivo lateral superior",
+        "path": "maxillary-lateral",
+        "id": 2
+      },
+      {
+        "name": "Canino superior",
+        "path": "maxillary-canine",
+        "id": 3
+      },
+      {
+        "name": "Primer premolar superior",
+        "path": "maxillary-first-premolar",
+        "id": 4
+      },
+      {
+        "name": "Segundo premolar superior",
+        "path": "maxillary-second-premolar",
+        "id": 5
+      },
+      {
+        "name": "Primer molar superior",
+        "path": "maxillary-first-molar",
+        "id": 6
+      },
+      {
+        "name": "Segundo molar superior",
+        "path": "maxillary-second-molar",
+        "id": 7
+      },
+      {
+        "name": "Tercer molar superior",
+        "path": "maxillary-third-molar",
+        "id": 8
+      }
+    ]
+  }
+
+  const mandibularData = {
+    "title": "Dientes inferiores",
+    "description": "Navega entre las piezas dentarias de la arcada inferior (todos los dientes en Morfo app corresponden a la hemiarcada izquierda).",
+    "teeth": [
+      {
+        "name": "Incisivo central inferior",
+        "path": "mandibular-central",
+        "id": 1
+      },
+      {
+        "name": "Incisivo lateral inferior",
+        "path": "mandibular-lateral",
+        "id": 2
+      },
+      {
+        "name": "Canino inferior",
+        "path": "mandibular-canine",
+        "id": 3
+      },
+      {
+        "name": "Primer premolar inferior",
+        "path": "mandibular-first-premolar",
+        "id": 4
+      },
+      {
+        "name": "Segundo premolar inferior",
+        "path": "mandibular-second-premolar",
+        "id": 5
+      },
+      {
+        "name": "Primer molar inferior",
+        "path": "mandibular-first-molar",
+        "id": 6
+      },
+      {
+        "name": "Segundo molar inferior",
+        "path": "mandibular-second-molar",
+        "id": 7
+      },
+      {
+        "name": "Tercer molar inferior",
+        "path": "mandibular-third-molar",
+        "id": 8
+      }
+    ]
+  }
+
   const [actualPosition, setActualPosition] = useState([])
 
   return (
@@ -728,7 +822,7 @@ function App() {
           <Route path='/mandibular-first-molar' element={<TeethPage data={database[13]} surfaces={surfacesInfo[13]} />} />
           <Route path='/mandibular-second-molar' element={<TeethPage data={database[14]} surfaces={surfacesInfo[14]} />} />
           <Route path='/mandibular-third-molar' element={<TeethPage data={database[15]} surfaces={surfacesInfo[15]} />} />
-          <Route path='/maxillary' element={<MaxillaryPage />} />
+          <Route path='/maxillary' element={<MaxillaryPage data={maxillaryData} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>
