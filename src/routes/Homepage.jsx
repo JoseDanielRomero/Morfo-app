@@ -8,8 +8,23 @@ import hand from '../images/hand.png'
 import loudspeaker from '../images/loudspeaker.png'
 import logoWhiteFill from '../images/tooth-4.png'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function Homepage() {
+
+  const paths = [
+    'maxillary-central', 'maxillary-lateral', 'maxillary-canine', 'maxillary-first-premolar', 'maxillary-second-premolar', 'maxillary-first-molar', 'maxillary-second-molar', 'maxillary-third-molar', 'mandibular-central', 'mandibular-lateral', 'mandibular-canine', 'mandibular-first-premolar', 'mandibular-second-premolar', 'mandibular-first-molar', 'mandibular-second-molar', 'mandibular-third-molar'
+  ]
+  
+  const [randomToothPath, setRandomToothPath] = useState('')
+
+  useEffect(() => {
+
+    setRandomToothPath(Math.floor(Math.random() * paths.length))
+
+  },[])
+
   return (
     <>
       <header className='h-auto md:h-[500px] w-screen bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-stretch justify-top lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10' style={{backgroundImage: `url(${bgImage})`}}>
@@ -21,7 +36,7 @@ function Homepage() {
               <p className='font-inter font-normal text-[1rem] text-white leading-tight'>
                 Explora la forma, estructura y características clínicas de todas las piezas dentarias permanentes a través de modelos 3D.
               </p>
-              <Link to='/maxillary-central' className='h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out shadow-md'>
+              <Link to={`/${paths[randomToothPath]}`} className='h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out shadow-md'>
                 <p className='font-inter font-semibold text-lg text-white'>Pruébalo ahora</p>
               </Link>
             </div>

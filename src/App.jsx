@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { createContext } from 'react';
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Homepage from './routes/Homepage';
-import MaxillaryPage from './routes/MaxillaryPage';
+import ArchPage from './routes/ArchPage';
 import TeethPage from './routes/TeethPage';
 
 export const PositionContext = createContext([])
@@ -708,6 +708,7 @@ function App() {
   const maxillaryData = {
     "title": "Dientes superiores",
     "description": "Navega entre las piezas dentarias de la arcada superior (todos los dientes en Morfo app corresponden a la hemiarcada izquierda).",
+    "buttonPath": "maxillary-central",
     "teeth": [
       {
         "name": "Incisivo central superior",
@@ -755,6 +756,7 @@ function App() {
   const mandibularData = {
     "title": "Dientes inferiores",
     "description": "Navega entre las piezas dentarias de la arcada inferior (todos los dientes en Morfo app corresponden a la hemiarcada izquierda).",
+    "buttonPath": "mandibular-central",
     "teeth": [
       {
         "name": "Incisivo central inferior",
@@ -822,7 +824,8 @@ function App() {
           <Route path='/mandibular-first-molar' element={<TeethPage data={database[13]} surfaces={surfacesInfo[13]} />} />
           <Route path='/mandibular-second-molar' element={<TeethPage data={database[14]} surfaces={surfacesInfo[14]} />} />
           <Route path='/mandibular-third-molar' element={<TeethPage data={database[15]} surfaces={surfacesInfo[15]} />} />
-          <Route path='/maxillary' element={<MaxillaryPage data={maxillaryData} />} />
+          <Route path='/maxillary' element={<ArchPage data={maxillaryData} />} />
+          <Route path='/mandibular' element={<ArchPage data={mandibularData} />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>

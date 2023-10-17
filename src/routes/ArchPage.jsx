@@ -3,8 +3,18 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import bgImage from '../images/background-desktop3.png'
 import logoWhiteNoFill from '../images/tooth-2.png'
+import logoWhiteFill from '../images/tooth-4.png'
+import bgFooter from '../images/background-footer.png'
+import { useEffect } from 'react'
 
-function MaxillaryPage({ data }) {
+function ArchPage({ data }) {
+
+  useEffect(() => {
+
+    window.scrollTo(0, 0);
+
+  },[data])
+
   return (
     <>
       <header className='h-auto md:h-[500px] w-screen bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-stretch justify-top lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10' style={{backgroundImage: `url(${bgImage})`}}>
@@ -16,8 +26,8 @@ function MaxillaryPage({ data }) {
               <p className='font-inter font-normal text-[1rem] text-white leading-tight'>
                 {data.description}
               </p>
-              <Link to='/maxillary-central' className='h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out shadow-md'>
-                <p className='font-inter font-semibold text-lg text-white'>Pruébalo ahora</p>
+              <Link to={`/${data.buttonPath}`} className='h-10 w-auto px-10 rounded-full bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 from-purple-600 to-pink-700 flex flex-col items-center justify-center cursor-pointer transition ease-in-out shadow-md'>
+                <p className='font-inter font-semibold text-lg text-white'>Empieza el recorrido</p>
               </Link>
             </div>
           </div>
@@ -28,7 +38,7 @@ function MaxillaryPage({ data }) {
           </div>
         </div>
       </header>
-      <main className='h-auto w-screen lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10'>
+      <main className='h-auto w-screen lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10 mb-8'>
         <section className='h-auto w-full grid grid-cols-2 lg:grid-cols-8 sm:grid-cols-4 bg-white p-1 gap-1 rounded-md'>
           {data.teeth.map((tooth)=>{  
 
@@ -49,8 +59,17 @@ function MaxillaryPage({ data }) {
           })}
         </section>
       </main>
+      <footer className='h-auto w-screen bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-center justify-center lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10 gap-2' style={{backgroundImage: `url(${bgFooter})`}}>
+        <div className='h-full w-auto flex flex-row items-center gap-2 cursor-pointer'>
+          <img src={logoWhiteFill} className='object-cover h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]' />
+          <h3 className='font-unbounded font-semibold text-[1.2rem] lg:text-[1.3rem] text-white'>Morfo app</h3>
+        </div>
+        <h1 className='text-transparent text-[1rem] lg:text-[1.1rem] text-white font-unbounded font-light leading-tight mb-4 text-center'>
+          Diseñada y desarrollada por José Romero © 2023
+        </h1>
+      </footer>
     </>
   )
 }
 
-export default MaxillaryPage
+export default ArchPage;
