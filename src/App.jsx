@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Homepage from './routes/Homepage';
 import ArchPage from './routes/ArchPage';
 import TeethPage from './routes/TeethPage';
+import ContactPage from './routes/ContactPage';
 
 export const PositionContext = createContext([])
 
@@ -826,6 +827,7 @@ function App() {
           <Route path='/mandibular-third-molar' element={<TeethPage data={database[15]} surfaces={surfacesInfo[15]} />} />
           <Route path='/maxillary' element={<ArchPage data={maxillaryData} />} />
           <Route path='/mandibular' element={<ArchPage data={mandibularData} />} />
+          <Route path='/contact' element={<ContactPage />} />
         </Routes>
       </HashRouter>
     </PositionContext.Provider>

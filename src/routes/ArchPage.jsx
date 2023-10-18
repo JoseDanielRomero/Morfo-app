@@ -15,6 +15,11 @@ function ArchPage({ data }) {
 
   },[data])
 
+  const handleClickToRedirect = (url) => {
+    window.location.href = url
+    window.location.reload(true)
+  }
+
   return (
     <>
       <header className='h-auto md:h-[500px] w-screen bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-stretch justify-top lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10' style={{backgroundImage: `url(${bgImage})`}}>
@@ -60,7 +65,7 @@ function ArchPage({ data }) {
         </section>
       </main>
       <footer className='h-auto w-screen bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-center justify-center lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10 gap-2' style={{backgroundImage: `url(${bgFooter})`}}>
-        <div className='h-full w-auto flex flex-row items-center gap-2 cursor-pointer'>
+        <div onClick={()=>handleClickToRedirect('/#/contact')} className='h-full w-auto flex flex-row items-center gap-2 cursor-pointer'>
           <img src={logoWhiteFill} className='object-cover h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]' />
           <h3 className='font-unbounded font-semibold text-[1.2rem] lg:text-[1.3rem] text-white'>Morfo app</h3>
         </div>
