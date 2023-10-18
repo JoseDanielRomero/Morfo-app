@@ -17,6 +17,7 @@ function ArchPage({ data }) {
 
   const handleClickToRedirect = (url) => {
     window.location.href = url
+    window.scrollTo(0, 0);
     window.location.reload(true)
   }
 
