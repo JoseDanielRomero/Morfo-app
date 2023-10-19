@@ -58,7 +58,7 @@ function TeethPage({ data, surfaces }) {
 
     let loadedModel;
     const glftLoader = new GLTFLoader();
-    glftLoader.load(`../../assets/${data.folderName}/scene.gltf`, (gltfScene) => {
+    glftLoader.load(`/Morfo-app/${data.folderName}/scene.gltf`, (gltfScene) => {
       loadedModel = gltfScene;
 
       gltfScene.scene.position.x = data.scene[0];
@@ -69,15 +69,6 @@ function TeethPage({ data, surfaces }) {
       test.scene.add(gltfScene.scene);
     });
 
-    // const animate = () => {
-    //   if (loadedModel) {
-    //     // loadedModel.scene.rotation.x += 0.01;
-    //     loadedModel.scene.rotation.y += 0.01;
-    //     // loadedModel.scene.rotation.z += 0.01;
-    //   }
-    //   requestAnimationFrame(animate);
-    // };
-    // animate();
   }, [actualPosition, data]);
 
   const handleClick = (params) => {
@@ -175,7 +166,7 @@ function TeethPage({ data, surfaces }) {
           </section>
         </main>
         <footer className='h-auto w-full bg-cover bg-center lg:bg-left-top bg-no-repeat flex flex-col items-center justify-center lg:pl-20 lg:pr-20 pt-8 pb-10 pl-10 pr-10 gap-2' style={{backgroundImage: `url(${bgFooter})`}}>
-          <div onClick={()=>handleClickToRedirect('/#/contact')} className='h-full w-auto flex flex-row items-center gap-2 cursor-pointer'>
+          <div onClick={()=>handleClickToRedirect('/Morfo-app/#/contact')} className='h-full w-auto flex flex-row items-center gap-2 cursor-pointer'>
             <img src={logoWhiteFill} className='object-cover h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]' />
             <h3 className='font-unbounded font-semibold text-[1.2rem] lg:text-[1.3rem] text-white'>Morfo app</h3>
           </div>
