@@ -33,7 +33,7 @@ function ContactPage() {
             </h1>
             <div className='h-auto w-auto flex flex-col items-start justify-start gap-3 mb-10'>
               <p className='font-inter font-normal text-[1.1rem] text-white leading-tight'>
-                "Permanent Teeth" collection ( <a target='_blank' href='https://sketchfab.com/DundeeDental/collections/permanent-teeth-4c0d0548c40c463c8cdceb6e0d08df7f' className=' text-blue-400'>https://skfb.ly/HzyR</a> ) by University of Dundee, School of Dentistry is licensed under Creative Commons Attribution ( <a target='_blank' href='http://creativecommons.org/licenses/by/4.0/' className=' text-blue-400'>http://creativecommons.org/licenses/by/4.0/</a> ).
+                "Permanent Teeth" collection ( <a target='_blank' href='https://sketchfab.com/DundeeDental/collections/permanent-teeth-4c0d0548c40c463c8cdceb6e0d08df7f' className=' text-blue-400'>https://skfb.ly/HzyR</a> ) by University of Dundee, School of Dentistry is licensed under Creative Commons Attribution ( <a target='_blank' href='http://creativecommons.org/licenses/by/4.0/' className=' text-blue-400'>http://creativecommons.org</a> ).
               </p>
               <a target='_blank' href='http://creativecommons.org/licenses/by/4.0/' className=' text-blue-400'>
                 <img src={ccLogo} className='object-cover h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]' />
@@ -51,15 +51,21 @@ function ContactPage() {
               </a>
             </div>
             <h1 className='text-xl text-purple-400 font-unbounded font-light leading-tight mb-0 md:mb-2'>
+              Sobre la bibliografía
+            </h1>
+            <div className='h-auto w-auto flex flex-col items-start justify-start gap-3 mb-10'>
+              <p className='font-inter font-normal text-[1.1rem] text-white leading-tight'>
+                Nelson, S. y Ash, M. (2006). Wheeler: Anatomía, fisiología y oclusión dental. Elsevier.<br></br>
+                ( <a target='_blank' href='https://tienda.elsevier.es/wheeler-anatomia-fisiologia-y-oclusion-dental-9788491138068.html' className=' text-blue-400'>https://tienda.elsevier.es/wheeler-anatomia-fisiologia-y-oclusion-dental-9788491138068.html</a> )
+              </p>
+            </div>
+            <h1 className='text-xl text-purple-400 font-unbounded font-light leading-tight mb-0 md:mb-2'>
               Sobre uso de la app
             </h1>
             <div className='h-auto w-auto flex flex-col items-start justify-start gap-3'>
               <p className='font-inter font-normal text-[1.1rem] text-white leading-tight'>
                 Morfo app es una aplicación de libre acceso, tanto educadores como estudiantes son bienvenidos a usar y distribuir la web para llegar a ser reconocida como una aliada en la educación y/o actualización en el sector odontológico.
               </p>
-              {/* <a target='_blank' href='https://www.instagram.com/josedanielromero_t/' className=' text-blue-400'>
-                <img src={instagramLogo} className='object-cover h-[28px] w-[28px] lg:h-[32px] lg:w-[32px]' />
-              </a> */}
             </div>
           </div>
           <div className='h-auto w-full md:w-auto md:1/2 lg:w-1/3 md:h-auto flex flex-col items-center justify-center md:items-end'>
